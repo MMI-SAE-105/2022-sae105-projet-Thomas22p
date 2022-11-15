@@ -5,8 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Last Time</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
+
 <body>
-    
+    <header>
+        <a href="index.html">
+            <img src="assets/icone/logo.svg" alt="Logo Last Time">
+        </a>
+
+        <button>
+            <img src="public/icone/menu.svg" alt="Menu hamburger"></a>
+        </button>
+        <nav x-data="{isOpen:false}">
+            <ul @click="isOpen = ! isOpen"><p>Articles</p>
+                <li x-show="isOpen"><a href="colisée.html">Le Colisée</a></li>
+                <li x-show="isOpen"><a href="gladiator.html">Gladiator</a></li>
+                <li x-show="isOpen"><a href="berserk.html">Berserk</a></li>
+                <li x-show="isOpen"><a href="espoir.html">L'espoir de la science</a></li>
+                <li x-show="isOpen"><a href="regret.html">Le danger de la science</a></li>
+                <li x-show="isOpen"><a href="kendrick.html">N95 de Kendrick Lamar</a></li>
+            </ul>
+            <ul>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="autres_projets.html">Autres projets</a></li>
+            </ul>
+            <ul>
+                <li><a href="a_propos.html">A propos</a></li>
+                <li><a href="glossaire.html">Glossaire</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <body>
+        <h1>LAST TIME</h1> 
+    </body>
+
 </body>
 </html>
