@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Last Time</title>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 
 <body>
@@ -14,28 +15,29 @@
             <img src="public/icone/logo.svg" alt="Logo Last Time">
         </a>
 
-        <button>
+        <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
             <img src="public/icone/menu.svg" alt="Menu hamburger"></a>
         </button>
-        <nav x-data="{isOpen:false}">
-            <ul @click="isOpen = ! isOpen"><p>Articles</p>
-                <li x-show="isOpen"><a href="colisée.html">Le Colisée</a></li>
-                <li x-show="isOpen"><a href="gladiator.html">Gladiator</a></li>
-                <li x-show="isOpen"><a href="berserk.html">Berserk</a></li>
-                <li x-show="isOpen"><a href="espoir.html">L'espoir de la science</a></li>
-                <li x-show="isOpen"><a href="regret.html">Le danger de la science</a></li>
-                <li x-show="isOpen"><a href="kendrick.html">N95 de Kendrick Lamar</a></li>
-            </ul>
+
+        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
             <ul>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="autres_projets.html">Autres projets</a></li>
-            </ul>
-            <ul>
+                <li><a href="index.html"><img src="public/icone/articles.svg" alt=""> Articles</a>
+                    <ul>
+                      <li><a href="colisée.html">Le Colisée</a></li>
+                      <li><a href="gladiator.html">Gladiator</a></li>
+                      <li><a href="berserk.html">Berserk</a></li>
+                      <li><a href="espoir.html">L'espoir de la science</a></li>
+                      <li><a href="regret.html">Le danger de la science</a></li>
+                      <li><a href="kendrick.html">N95 de Kendrick Lamar</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html"><img src="public/icone/contact.svg" alt="contactez-moi">Contact</a></li>
+                <li><a href="autres_projets.html"><img src="public/icone/autres projets.svg" alt="">Autres projets</a></li>
+
                 <li><a href="a_propos.html">A propos</a></li>
                 <li><a href="glossaire.html">Glossaire</a></li>
             </ul>
         </nav>
-
     </header>
 
 
