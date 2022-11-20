@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Time</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="public/icone/logo.svg" alt="Logo Last Time">
+        </a>
+
+        <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
+            <img src="public/icone/menu.svg" alt="Menu hamburger"></a>
+        </button>
+
+        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+            <ul>
+                <li><a href="index.html"><img src="public/icone/articles.svg" alt=""> Articles</a>
+                    <ul>
+                      <li><a href="colisée.html">Le Colisée</a></li>
+                      <li><a href="gladiator.html">Gladiator</a></li>
+                      <li><a href="berserk.html">Berserk</a></li>
+                      <li><a href="espoir.html">L'espoir de la science</a></li>
+                      <li><a href="regret.html">Le danger de la science</a></li>
+                      <li><a href="kendrick.html">N95 de Kendrick Lamar</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html"><img src="public/icone/contact.svg" alt="contactez-moi">Contact</a></li>
+                <li><a href="autres_projets.html"><img src="public/icone/autres projets.svg" alt="">Autres projets</a></li>
+
+                <li><a href="a_propos.html">A propos</a></li>
+                <li><a href="glossaire.html">Glossaire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <img src="public/icone/chevron.svg" alt="retouren arrière">
+        <img src="/public/icone/langue EN.svg" alt="lire en anglais">
+
+        <section>
+            <h1>Take off the evil</h1>
+            <h1>Take off the illusion</h1>
+            <img src="public/icone/horloge.svg" alt="Temps de lecture">
+            <p>Temps de lecture : 5 min</p>
+            <img src="public/img/musique.webp" alt="kendrick">
+            <p>Dans N95, Kendrick Lamar a beaucoup de choses à dire et aborde les différents maux qui menacent la société. A travers cette musique, il nous donne un aperçu de sa vie, avec les traumatismes qu’il a vécu et les difficultés qu’il traverse.</p>
+        </section>
+
+        <section>
+
+            mettre la vidéo du clip
+            <h2>Sortir de l’ombre</h2>
+            <p>Kendrick Lamar est un rappeur très connu et respecté. Né le 17 juin 1987 à Compton en Californie, il est rappeur, réalisateur artistique et acteur. Il commence sa carrière de rappeur en 2003 avec sa première mixtape, à l'âge de 16 ans. Il signera ensuite un contrat avec Top Dawg Entertainment pour créer et publier sa deuxième mixtape, Training Day.
+                Mais c'est seulement en 2010, que Lamar commence sérieusement à se faire connaître avec son morceau Ignorance Is Bliss, qui attirera l'attention des célèbres rappeurs Dr. Dre et de Snoop Dog.
+            </p>
+            <h2>Anecdote :</h2>
+            <p>Après avoir travaillé avec Kendrick Lamar et participer à son développement, Snoop Dog le considère comme un roi du rap. Dans une interview, il dit :</p>
+            <q>J'ai fait mon truc pendant 20 ans environ en tant que roi de la côte Ouest, j'ai donné la couronne à Kendrick Lamar, enfin je ne lui ai pas donnée ; à vrai dire, il l'a prise, mais je devais l'enlever de ma tête et la lui donner.</q>
+            <h2>Sa résurrection en musique</h2>
+            <p>En 2022, il revient en solo après 4 ans sans album, son dernier étant Black Panther, un album en collaboration avec plusieurs artistes, qui constitue la bande son du film Black Panther de Marvel Studios. Il sort donc son cinquième album Mr. Morale & the Big Steppers, un volet très important de sa discographie et sûrement le plus intimiste.</p>
+            <img src="public/img/album.webp" alt="album de Kendrick Lamar">
+            <p>Dans cet album, une musique connue des Etats-Uni s’intitule N95, ou il y rappe sur des thèmes comme la superficialité, la manipulation des médias, la politique, le système ou encore l'hypocrisie. 
+                Le rappeur s'attaque à tout en variant de style, il fait en quelque sorte un featuring en étant seul. 
+                En effet le critique musical Alexis Petridis a rapporté que
+            </p>
+            <q>le ton de sa prestation change si radicalement et si souvent qu’il ressemble moins à l’œuvre d’un homme qu’à une série d’apparitions en tant qu’invité</q>
+        </section>
+
+        <section>
+            <h3>PLUS D'ARTICLES</h3>
+            <article>
+                <a href="espoir.html">
+                    <img src="public/img/espoir.webp" alt="L'espoir de la science">
+                    <h2>De découverte en découverte : les avantages de la science.</h2>
+                    <p>La science a toujours été au centre de notre quotidien. Le monde d’aujourd’hui ...     voir plus</p>
+                </a>
+            </article>
+            <article>
+                <a href="regret.html">
+                    <img src="public/img/regret.webp" alt="Le danger de la science">
+                    <h2>Du côté obscur de la science.</h2>
+                    <p>La science a toujours été au centre de notre quotidien. Que nous soyons dans le métro ou dans notre voiture, en train de ...         voir plus</p>
+                </a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>POUPON Thomas - B2</p>
+        <q>Projet réalisé dans le cadre d'un exercice pédagogique au département <a href="http://mmimontbeliard.com/">MMI de Montbéliard</a></q>
+        <a href="mailto:thomaspoupon39270@gmail.com">Envoyer un mail</a>
+        <ul>
+            <li><a href="https://www.instagram.com/_thomas_ppn_/"><img src="public/icone/instagram.svg" alt="lien Instagram pour me suivre"></a></li>
+            <li><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/"><img src="public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre"></a></li>
+        </ul>
+    </footer>
+</body>
+</html>
