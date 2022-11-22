@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Time</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="public/icone/logo.svg" alt="Logo Last Time">
+        </a>
+
+        <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
+            <img src="public/icone/menu.svg" alt="Menu hamburger"></a>
+        </button>
+
+        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+            <ul>
+                <li><a href="index.html"><img src="public/icone/articles.svg" alt=""> Articles</a>
+                    <ul>
+                      <li><a href="colisée.html">Le Colisée</a></li>
+                      <li><a href="gladiator.html">Gladiator</a></li>
+                      <li><a href="berserk.html">Berserk</a></li>
+                      <li><a href="espoir.html">L'espoir de la science</a></li>
+                      <li><a href="regret.html">Le danger de la science</a></li>
+                      <li><a href="kendrick.html">N95 de Kendrick Lamar</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html"><img src="public/icone/contact.svg" alt="contactez-moi">Contact</a></li>
+                <li><a href="autres_projets.html"><img src="public/icone/autres projets.svg" alt="">Autres projets</a></li>
+
+                <li><a href="a_propos.html">A propos</a></li>
+                <li><a href="glossaire.html">Glossaire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <img src="public/img/contact.webp" alt="contactez-nous">
+        <h1>Contactez-nous</h1>
+        <form action="#">
+            <label for="last-name">Nom </label>
+            <input type="text" name="last-name" id="last-name">
+
+            <label for="first-name">Prénom</label>
+            <input type="text" name="first-name" id="first-name">
+
+            <label for="email">Adresse mail</label>
+            <input type="email" name="email" id="email">
+
+            <label for="message">Envoyez nous votrer message</label>
+            <textarea name="message" id="message" cols="30" rows="1"></textarea>
+
+            <button type="submit">Send</button>
+        </form> 
+    </main>
+    
+    <footer>
+        <p>POUPON Thomas - B2</p>
+        <q>Projet réalisé dans le cadre d'un exercice pédagogique au département <a href="http://mmimontbeliard.com/">MMI de Montbéliard</a></q>
+        <a href="mailto:thomaspoupon39270@gmail.com">Envoyer un mail</a>
+        <ul>
+            <li><a href="https://www.instagram.com/_thomas_ppn_/"><img src="public/icone/instagram.svg" alt="lien Instagram pour me suivre"></a></li>
+            <li><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/"><img src="public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre"></a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
