@@ -1,5 +1,14 @@
-@import url('TES FONTS ICI');
+/*Polices de caractères*/
+@import url('https://discordapp.com/channels/@me/1018833105110446091/1044978505861042187');
+
+/*Librairies*/
 @import "vendors/normalize.css";
+
+/*Variables*/
 @import "utils/variables.css";
-@import "base/media.css";
+
+/*Base*/
+@import "base/main.css";
+
+/*Média*/
 @import "base/media.css";
