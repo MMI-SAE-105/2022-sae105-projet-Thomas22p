@@ -7,12 +7,12 @@
     <title>Last Time</title>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs"></script>
-    <link rel=”stylesheet” href=”css/style.css”/>
+    <link rel="stylesheet" href="/src/css/style.css">
 </head>
 
 <body>
-    <header>
-        <a href="/fr/index.html">
+    <header class="header">
+        <a href="/fr/index.html" class="header__icone">
             <img src="/public/icone/logo.svg" alt="Logo Last Time">
         </a>
 
@@ -22,21 +22,21 @@
 
         <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
             <ul>
-                <li><a href="/fr/index.html"><img src="/public/icone/articles.svg" alt=""> Articles</a>
+                <li><a href="/fr/index.html"><img src="/public/icone/articles.svg" alt="articles"> Articles</a>
                     <ul>
-                      <li><a href="/fr/colisée.html">Le Colisée</a></li>
-                      <li><a href="/fr/gladiator.html">Gladiator</a></li>
-                      <li><a href="/fr/berserk.html">Berserk</a></li>
-                      <li><a href="/fr/espoir.html">L'espoir de la science</a></li>
-                      <li><a href="/fr/regret.html">Le danger de la science</a></li>
-                      <li><a href="/fr/kendrick.html">N95 de Kendrick Lamar</a></li>
+                      <li class="menu__item"><a href="/fr/colisée.html">Le Colisée</a></li>
+                      <li class="menu__item"><a href="/fr/gladiator.html">Gladiator</a></li>
+                      <li class="menu__item"><a href="/fr/berserk.html">Berserk</a></li>
+                      <li class="menu__item"><a href="/fr/espoir.html">L'espoir de la science</a></li>
+                      <li class="menu__item"><a href="/fr/regret.html">Le danger de la science</a></li>
+                      <li class="menu__item"><a href="/fr/kendrick.html">N95 de Kendrick Lamar</a></li>
                     </ul>
                 </li>
-                <li><a href="/fr/contact.html"><img src="/public/icone/contact.svg" alt="contactez-moi">Contact</a></li>
-                <li><a href="/fr/autres_projets.html"><img src="/public/icone/autres projets.svg" alt="">Autres projets</a></li>
+                <li class="menu__item"><a href="/fr/contact.html"><img src="/public/icone/contact.svg" alt="contactez-moi">Contact</a></li>
+                <li class="menu__item"><a href="/fr/autres_projets.html"><img src="/public/icone/autres projets.svg" alt="autres projets">Autres projets</a></li>
 
-                <li><a href="/fr/a_propos.html">A propos</a></li>
-                <li><a href="/fr/glossaire.html">Glossaire</a></li>
+                <li class="menu__item"><a href="/fr/a_propos.html">A propos</a></li>
+                <li class="menu__item"><a href="/fr/glossaire.html">Glossaire</a></li>
             </ul>
         </nav>
     </header>
