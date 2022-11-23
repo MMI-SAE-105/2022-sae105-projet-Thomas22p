@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Time</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="public/icone/logo.svg" alt="Logo Last Time">
+        </a>
+
+        <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
+            <img src="public/icone/menu.svg" alt="Menu hamburger"></a>
+        </button>
+
+        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+            <ul>
+                <li><a href="/fr/index.html"><img src="public/icone/articles.svg" alt=""> Articles</a>
+                    <ul>
+                      <li><a href="/fr/colisée.html">Le Colisée</a></li>
+                      <li><a href="/fr/gladiator.html">Gladiator</a></li>
+                      <li><a href="/fr/berserk.html">Berserk</a></li>
+                      <li><a href="/fr/espoir.html">L'espoir de la science</a></li>
+                      <li><a href="/fr/regret.html">Le danger de la science</a></li>
+                      <li><a href="/fr/kendrick.html">N95 de Kendrick Lamar</a></li>
+                    </ul>
+                </li>
+                <li><a href="/fr/contact.html"><img src="public/icone/contact.svg" alt="contactez-moi">Contact</a></li>
+                <li><a href="/fr/autres_projets.html"><img src="public/icone/autres projets.svg" alt="">Autres projets</a></li>
+
+                <li><a href="/fr/a_propos.html">A propos</a></li>
+                <li><a href="/fr/glossaire.html">Glossaire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Glossaire</h1>
+        <div class="glossaire">
+            <div class="glossaire__item">
+                <h2>Seinen :</h2>
+                <p>manga généralement pour adulte avec de l’action.</p>
+            </div>
+            <div class="glossaire__item">
+                <h2>Péplum :</h2>
+                <p> Le péplum est un genre cinématographique de fiction historique dont l'action se déroule dans l'Antiquité.</p>
+            </div>
+            <div class="glossaire__item">
+                <h2>Calcaire travertin :</h2>
+                <p> Le travertin est une roche calcaire sédimentaire, appelée aussi tuf calcaire, souvent utilisée comme alternative pour le marbre ou le granit.</p>
+            </div>
+            <div class="glossaire__item">
+                <h2>Mixtape :</h2>
+                <p>C’est une composition de morceaux/chansons.</p>
+            </div>
+        </div>    
+    </main>
+    
+    <footer>
+        <p>POUPON Thomas - B2</p>
+        <q>Projet réalisé dans le cadre d'un exercice pédagogique au département <a href="http://mmimontbeliard.com/">MMI de Montbéliard</a></q>
+        <a href="mailto:thomaspoupon39270@gmail.com">Envoyer un mail</a>
+        <ul>
+            <li><a href="https://www.instagram.com/_thomas_ppn_/"><img src="public/icone/instagram.svg" alt="lien Instagram pour me suivre"></a></li>
+            <li><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/"><img src="public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre"></a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>

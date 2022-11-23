@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Time</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="public/icone/logo.svg" alt="Logo Last Time">
+        </a>
+
+        <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
+            <img src="public/icone/menu.svg" alt="Menu hamburger"></a>
+        </button>
+
+        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+            <ul>
+                <li><a href="/fr/index.html"><img src="public/icone/articles.svg" alt=""> Articles</a>
+                    <ul>
+                      <li><a href="/fr/colisée.html">Le Colisée</a></li>
+                      <li><a href="/fr/gladiator.html">Gladiator</a></li>
+                      <li><a href="/fr/berserk.html">Berserk</a></li>
+                      <li><a href="/fr/espoir.html">L'espoir de la science</a></li>
+                      <li><a href="/fr/regret.html">Le danger de la science</a></li>
+                      <li><a href="/fr/kendrick.html">N95 de Kendrick Lamar</a></li>
+                    </ul>
+                </li>
+                <li><a href="/fr/contact.html"><img src="public/icone/contact.svg" alt="contactez-moi">Contact</a></li>
+                <li><a href="/fr/autres_projets.html"><img src="public/icone/autres projets.svg" alt="">Autres projets</a></li>
+
+                <li><a href="/fr/a_propos.html">A propos</a></li>
+                <li><a href="/fr/glossaire.html">Glossaire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <h1>LAST TIME</h1>
+
+        <section>
+            <article>
+                <a href="/fr/colisée.html">
+                    <img src="public/img/colisée.webp" alt="Le Colisée">
+                    <h2>Le Colisé, un lieu culte et son histoire.</h2>
+                    <p>Le Colisée est le plus grand amphithéâtre de l’Antiquité. Situé dans le centre de Rome, il était à l’origine de grandes activités ...          voir plus</p>
+                </a>
+            </article>
+            <article>
+                <a href="/fr/gladiator.html">
+                    <img src="public/img/gladiator.webp" alt="Gladiator">
+                    <h2>Prêt à vous battre ?</h2>
+                    <p>Gladiator est un film de fiction historique revisitant la chute de l’Empire romain. Il est réalisé par le cinéaste Ridley Scott ...    voir plus</p>
+                </a>
+            </article>
+            <article>
+                <a href="/fr/berserk.html">
+                    <img src="public/img/berserk.webp" alt="Berserk">
+                    <h2>Une épopée sanglante : Berserk.</h2>
+                    <p>Berserk est un manga seinen de dark fantasy du mangaka Kentaro Miura. Il est inspiré de la période du moyen-âge Européen ...        voir plus</p>
+                </a>
+            </article>
+            <article>
+                <a href="/fr/espoir.html">
+                    <img src="public/img/espoir.webp" alt="L'espoir de la science">
+                    <h2>De découverte en découverte : les avantages de la science.</h2>
+                    <p>La science a toujours été au centre de notre quotidien. Le monde d’aujourd’hui ...     voir plus</p>
+                </a>
+            </article>
+            <article>
+                <a href="/fr/regret.html">
+                    <img src="public/img/regret.webp" alt="Le danger de la science">
+                    <h2>Du côté obscur de la science.</h2>
+                    <p>La science a toujours été au centre de notre quotidien. Que nous soyons dans le métro ou dans notre voiture, en train de ...         voir plus</p>
+                </a>
+            </article>
+            <article>
+                <a href="/fr/kendrick.html">
+                    <img src="public/img/musique.webp" alt="N95 de Kendrick Lamar">
+                    <h2>Take off the evil, take off the illusion </h2>
+                    <p>Dans N95, Kendrick Lamar a beaucoup de choses à dire et aborde les différents maux qui menacent la société. A travers ce ...       voir plus</p>
+                </a>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>POUPON Thomas - B2</p>
+        <q>Projet réalisé dans le cadre d'un exercice pédagogique au département <a href="http://mmimontbeliard.com/">MMI de Montbéliard</a></q>
+        <a href="mailto:thomaspoupon39270@gmail.com">Envoyer un mail</a>
+        <ul>
+            <li><a href="https://www.instagram.com/_thomas_ppn_/"><img src="public/icone/instagram.svg" alt="lien Instagram pour me suivre"></a></li>
+            <li><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/"><img src="public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre"></a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>

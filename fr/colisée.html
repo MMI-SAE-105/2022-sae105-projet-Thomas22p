@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Time</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="public/icone/logo.svg" alt="Logo Last Time">
+        </a>
+
+        <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
+            <img src="public/icone/menu.svg" alt="Menu hamburger"></a>
+        </button>
+
+        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+            <ul>
+                <li><a href="/fr/index.html"><img src="public/icone/articles.svg" alt=""> Articles</a>
+                    <ul>
+                      <li><a href="/fr/colisée.html">Le Colisée</a></li>
+                      <li><a href="/fr/gladiator.html">Gladiator</a></li>
+                      <li><a href="/fr/berserk.html">Berserk</a></li>
+                      <li><a href="/fr/espoir.html">L'espoir de la science</a></li>
+                      <li><a href="/fr/regret.html">Le danger de la science</a></li>
+                      <li><a href="/fr/kendrick.html">N95 de Kendrick Lamar</a></li>
+                    </ul>
+                </li>
+                <li><a href="/fr/contact.html"><img src="public/icone/contact.svg" alt="contactez-moi">Contact</a></li>
+                <li><a href="/fr/autres_projets.html"><img src="public/icone/autres projets.svg" alt="">Autres projets</a></li>
+
+                <li><a href="/fr/a_propos.html">A propos</a></li>
+                <li><a href="/fr/glossaire.html">Glossaire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <img src="public/icone/chevron.svg" alt="retouren arrière">
+        <img src="/public/icone/langue EN.svg" alt="lire en anglais">
+
+        <section>
+            <h1>Le Colisée, un lieu culte et son histoire</h1>
+            <img src="public/icone/horloge.svg" alt="Temps de lecture">
+            <p>Temps de lecture : 7 min</p>
+            <img src="/public/img/colisée.webp" alt="Le Colisée">
+            <p>Le Colisée est le plus grand amphithéâtre de l’Antiquité. Situé dans le centre de Rome, il était à l’origine de grandes activités connues et aimées du peuple Romain. De nos jours, il est devenu une attraction touristique majeure.</p>
+        </section>
+        article
+        <a href="/fr/frise.html">frise</a>
+        <section>
+            <h2>A quoi sert le Colisée ?</h2>
+            <p>Le Colisée a été construit en 80 pour divertir les citoyens romains en organisant différents évènements comme des combats de Gladiateurs, des chasses ouvertes ou encore des reconstitutions de batailles navales.
+                C’était également un puissant instrument de contrôle du peuple et une vitrine qui montrait la suprématie de Rome sur le monde ; à cette époque, l’Empire Romain s’étendait de la Grande-Bretagne à l’Égypte. 
+            </p>
+            <img src="public/img/map.webp" alt="carte de l'Empire Romain">
+            <h2>Les combats de gladiateurs</h2>
+            <p>Les Muneras sont des combats à morts entre gladiateurs dans le but d’offrir du divertissement aux spectateurs. Leurs affrontements relèvent plus du spectacle que de la volonté de tuer l'adversaire.
+                La plupart des gladiateurs sont d es criminels ou des prisonniers de guerre condamnés à mort. Mais le gouvernement les oblige à se battre à mort pour le divertir, lui et le peuple. Le film Gladiator, de Ridley Scott, l’illustre très bien.
+            </p>
+            <h2>L’incroyable histoire du Colisée</h2>
+            <p>La construction de ce bâtiment de 188 m de long, 155 m de largeur et 48 m de haut fut aussi rude est violente que les évènements qui s’y déroulèrent par la suite. La construction du Colisée a été perçue comme une prouesse. En effet, les romains utilisaient pour la première fois des matériaux toujours utilisés de nos jours, comme l’utilisation de calcaire travertin et de béton. En utilisant ses nouveaux matériaux, ils n’avaient aucune preuve que l’édifice tiendrait, mais sous la pression de l’empereur Vespasien, les romains devaient exécuter les ordres.
+                Connu sous le nom d'amphithéâtre Flavien, le nom de l'arène s'inspire d'une statue colossale de Néron qui se trouvait autrefois à proximité, baptisée Le Colosse.
+            </p>
+            <img src="public/img/néron.webp" alt="Le Colsse de Néron">
+            <p>cette image est une reproduction</p>
+            <p>C’est en partie grâce à Néron, celui que l’on surnommait « le tyran de Rome », que le Colisée a pu être construit. Néron est le cinquième et dernier empereur de la dynastie Julio-claudienne. On le soupçonnait d’avoir mis volontairement le feu à Rome pour le reconstruire à son image. En effet, après cet incendie, il a construit un grand complexe palatial, la Domus Aurea. Il a également aménagé le terrain pour y installer un lac artificiel, des pavillons, des jardins et des portiques et le gigantesque colosse de bronze de Néron. Plus tard, la célèbre Domus Aurea fut détruite pour construire le plus grand monument de l’Empire Romain, le Colisée.</p>
+            <a href="https://www.colosseum-rome-tickets.com/fr/colosseum/">Visiter le Colisée</a>
+        </section>
+        <section>
+            <h3>PLUS D'ARTICLES</h3>
+            <article>
+                <a href="/fr/gladiator.html">
+                    <img src="public/img/gladiator.webp" alt="Gladiator">
+                    <h2>Prêt à vous battre ?</h2>
+                    <p>Gladiator est un film de fiction historique revisitant la chute de l’Empire romain. Il est réalisé par le cinéaste Ridley Scott ...    voir plus</p>
+                </a>
+                <a href="/fr/berserk.html">
+                    <img src="public/img/berserk.webp" alt="Berserk">
+                    <h2>Une épopée sanglante : Berserk.</h2>
+                    <p>Berserk est un manga seinen de dark fantasy du mangaka Kentaro Miura. Il est inspiré de la période du moyen-âge Européen ...        voir plus</p>
+                </a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>POUPON Thomas - B2</p>
+        <q>Projet réalisé dans le cadre d'un exercice pédagogique au département <a href="http://mmimontbeliard.com/">MMI de Montbéliard</a></q>
+        <a href="mailto:thomaspoupon39270@gmail.com">Envoyer un mail</a>
+        <ul>
+            <li><a href="https://www.instagram.com/_thomas_ppn_/"><img src="public/icone/instagram.svg" alt="lien Instagram pour me suivre"></a></li>
+            <li><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/"><img src="public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre"></a></li>
+        </ul>
+    </footer>
+</body>
+</html>
