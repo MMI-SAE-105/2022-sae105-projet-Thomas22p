@@ -11,9 +11,9 @@
 
     /* Text-size styles */
     --l: 32px;
-    --m: 20;
+    --m: 20px;
     --s: 16px;
     --xs: 12px;
 
-    --lineal: 'IBM', serif;
+    --linear: 'IBM Plex Sans Condensed', linear;
 }

@@ -1,6 +1,16 @@
 p {
-    font-family: var(--lineal);
+    font-family: var(--linear);
     font-size: var(--s);
+}
+
+h1 {
+    font-family: var(--linear);
+    font-size: var(--l);
+}
+
+h2 {
+    font-family: var(--linear);
+    font-size: var(--m);
 }
 
 a {
@@ -10,18 +20,4 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-.menu {
-    background: blue;
-    color: white;
-}
-
-.main {
-    width: 100%;
-}
-
-.main__article {
-    display: table-cell;
-    vertical-align: middle
 }
