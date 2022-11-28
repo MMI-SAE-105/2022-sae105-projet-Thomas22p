@@ -1,5 +1,27 @@
+p {
+    font-family: var(--lineal);
+    font-size: var(--s);
+}
+
+a {
+    color: var(--noir);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .menu {
     background: blue;
     color: white;
 }
 
+.main {
+    width: 100%;
+}
+
+.main__article {
+    display: table-cell;
+    vertical-align: middle
+}
