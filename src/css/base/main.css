@@ -5,6 +5,7 @@ p {
 
 h1 {
     font-family: var(--linear);
+    font-style: medium;
     font-size: var(--l);
 }
 
