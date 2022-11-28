@@ -12,3 +12,12 @@
 
 /*Média*/
 @import "base/media.css";
+
+/*Header*/
+@import url(layout/header.css);
+
+/*Footer*/
+@import url(layout/footer.css);
+
+/*Menu*/
+@import url(components/menu.css);

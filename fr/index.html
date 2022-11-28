@@ -13,31 +13,34 @@
 
 <body>
     <header class="header">
-        <a href="/fr/index.html" class="header__icone">
-            <img src="/public/icone/logo.svg" alt="Logo Last Time">
-        </a>
+        <div class="header__main">
+            <a href="/fr/index.html" class="header__icone">
+                <img src="/public/icone/logo.svg" alt="Logo Last Time" class="header__logo">
+            </a>
+    
+            <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
+                <img src="/public/icone/menu.svg" alt="Menu hamburger"></a>
+            </button>
+        </div>
+        
 
-        <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
-            <img src="/public/icone/menu.svg" alt="Menu hamburger"></a>
-        </button>
-
-        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
-            <ul>
-                <li><a href="/fr/index.html"><img src="/public/icone/articles.svg" alt="articles"> Articles</a>
-                    <ul>
-                      <li class="menu__item"><a href="/fr/colisée.html">Le Colisée</a></li>
-                      <li class="menu__item"><a href="/fr/gladiator.html">Gladiator</a></li>
-                      <li class="menu__item"><a href="/fr/berserk.html">Berserk</a></li>
-                      <li class="menu__item"><a href="/fr/espoir.html">L'espoir de la science</a></li>
-                      <li class="menu__item"><a href="/fr/regret.html">Le danger de la science</a></li>
-                      <li class="menu__item"><a href="/fr/kendrick.html">N95 de Kendrick Lamar</a></li>
+        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="header__menu">
+            <ul class="menu__list">
+                <li class="menu__article"><a href="/fr/index.html"><img src="/public/icone/articles.svg" alt="articles" class="menu__article--icn"> Articles</a>
+                    <ul class="menu__article--list">
+                      <li class="menu__item"><a href="/fr/colisée.html" class="menu__link">Le Colisée</a></li>
+                      <li class="menu__item"><a href="/fr/gladiator.html" class="menu__link">Gladiator</a></li>
+                      <li class="menu__item"><a href="/fr/berserk.html" class="menu__link">Berserk</a></li>
+                      <li class="menu__item"><a href="/fr/espoir.html" class="menu__link">L'espoir de la science</a></li>
+                      <li class="menu__item"><a href="/fr/regret.html" class="menu__link">Le danger de la science</a></li>
+                      <li class="menu__item"><a href="/fr/kendrick.html" class="menu__link">N95 de Kendrick Lamar</a></li>
                     </ul>
                 </li>
-                <li class="menu__item"><a href="/fr/contact.html"><img src="/public/icone/contact.svg" alt="contactez-moi">Contact</a></li>
-                <li class="menu__item"><a href="/fr/autres_projets.html"><img src="/public/icone/autres projets.svg" alt="autres projets">Autres projets</a></li>
+                <li class="menu__contact"><a href="/fr/contact.html" class="menu__link"><img src="/public/icone/contact.svg" alt="contactez-moi" class="menu__article--icn">Contact</a></li>
+                <li class="menu__projets"><a href="/fr/autres_projets.html" class="menu__link"><img src="/public/icone/autres projets.svg" alt="autres projets" class="menu__article--icn">Autres projets</a></li>
 
-                <li class="menu__item"><a href="/fr/a_propos.html">A propos</a></li>
-                <li class="menu__item"><a href="/fr/glossaire.html">Glossaire</a></li>
+                <li class="menu__propos"><a href="/fr/a_propos.html" class="menu__link">A propos</a></li>
+                <li class="menu__glossaire"><a href="/fr/glossaire.html" class="menu__link">Glossaire</a></li>
             </ul>
         </nav>
     </header>
