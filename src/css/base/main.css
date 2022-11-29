@@ -25,5 +25,10 @@ a:hover {
 
 .main {
     padding: 0 20px;
-    padding-top: 100px;
+    padding-top: 110px;
+}
+
+.main__langue {
+    display: flex;
+    margin: 0 0 0 290px;
 }
