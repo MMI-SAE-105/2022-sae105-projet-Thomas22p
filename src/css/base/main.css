@@ -115,5 +115,10 @@ a:hover {
     line-height: 145%;
 }
 
+.section__AutresProjets {
+    text-align: center;
+}
+
+
 display: grid; 
 grid-area: 1/1/7/3

@@ -20,8 +20,9 @@
 
 button {
     border: none;
-    background: #FFC85A;
+    background: transparent;
     position: absolute;
     top: 30px;
     right: 20px;
+    z-index: 1;
 }

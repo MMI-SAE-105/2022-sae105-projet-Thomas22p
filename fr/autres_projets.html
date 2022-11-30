@@ -5,90 +5,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Last Time</title>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="icon" type="image/png" href="/public/icone/logo.svg">
 </head>
 
 <body>
-    <header>
+    <header class="header">
+        <div class="header__main">
+            <a href="/fr/index.html" class="header__icone">
+                <img src="/public/icone/logo.svg" alt="Logo Last Time" class="header__logo">
+            </a>
+    
+            <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
+                <img src="/public/icone/menu.svg" alt="Menu hamburger"></a>
+            </button>
+        </div>
         
-        <a href="/fr/index.html">
-            <img src="/public/icone/logo.svg" alt="Logo Last Time">
-        </a>
 
-        <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
-            <img src="/public/icone/menu.svg" alt="Menu hamburger"></a>
-        </button>
-
-        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
-            <ul>
-                <li><a href="/fr/index.html"><img src="/public/icone/articles.svg" alt=""> Articles</a>
-                    <ul>
-                      <li><a href="/fr/colisée.html">Le Colisée</a></li>
-                      <li><a href="/fr/gladiator.html">Gladiator</a></li>
-                      <li><a href="/fr/berserk.html">Berserk</a></li>
-                      <li><a href="/fr/espoir.html">L'espoir de la science</a></li>
-                      <li><a href="/fr/regret.html">Le danger de la science</a></li>
-                      <li><a href="/fr/kendrick.html">N95 de Kendrick Lamar</a></li>
+        <nav id="mainNav" x-show="menuIsOpen" class="header__menu">
+            <ul class="menu__list">
+                <li class="menu__article"><a href="/fr/index.html" class="menu__link"><img src="/public/icone/articles.svg" alt="articles" class="menu__article--icn"> Articles</a>
+                    <ul class="menu__article--list">
+                      <li class="menu__item"><a href="/fr/colisée.html" class="menu__link">Le Colisée</a></li>
+                      <li class="menu__item"><a href="/fr/gladiator.html" class="menu__link">Gladiator</a></li>
+                      <li class="menu__item"><a href="/fr/berserk.html" class="menu__link">Berserk</a></li>
+                      <li class="menu__item"><a href="/fr/espoir.html" class="menu__link">L'espoir de la science</a></li>
+                      <li class="menu__item"><a href="/fr/regret.html" class="menu__link">Le danger de la science</a></li>
+                      <li class="menu__item"><a href="/fr/kendrick.html" class="menu__link">N95 de Kendrick Lamar</a></li>
                     </ul>
                 </li>
-                <li><a href="/fr/contact.html"><img src="/public/icone/contact.svg" alt="contactez-moi">Contact</a></li>
-                <li><a href="/fr/autres_projets.html"><img src="/public/icone/autres projets.svg" alt="">Autres projets</a></li>
+                <li class="menu__contact"><a href="/fr/contact.html" class="menu__link"><img src="/public/icone/contact.svg" alt="contactez-moi" class="menu__article--icn">Contact</a></li>
+                <li class="menu__projets"><a href="/fr/autres_projets.html" class="menu__link"><img src="/public/icone/autres projets.svg" alt="autres projets" class="menu__article--icn">Autres projets</a></li>
 
-                <li><a href="/fr/a_propos.html">A propos</a></li>
-                <li><a href="/fr/glossaire.html">Glossaire</a></li>
+                <li class="menu__propos"><a href="/fr/a_propos.html" class="menu__link--propos">A propos</a></li>
+                <li class="menu__glossaire"><a href="/fr/glossaire.html" class="menu__link--glossaire">Glossaire</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <a href="/en/autres_projets.html"><img src="/public/icone/langue EN.svg" alt="voir en Anglais"></a>
+    <main class="main">
+        <a href="/en/autres_projets.html" class="main__langue"><img src="/public/icone/langue EN.svg" alt="voir en Anglais"></a>
         <h1>Autres projets</h1>
-        
-        <h2>Romane Miguel</h2>
-        <q>What it was to be eighteen</q>
-
-        <h2>Leopold Ohnimus</h2>
-        <q>Korean Notes</q>
-
-        <h2>Marwa Nezzar</h2>
-        <q>Kairos</q>
-
-        <h2>Yann Pernette</h2>
-        <q>Continuons Evolution</q>
-
-        <h2>Alban Luc</h2>
-        <q>Vers un monde utopique ?</q>
-
-        <h2>Arilès Messaoudi</h2>
-        <q>A quoi ressemblera le monde</q>
-
-        <h2>Camilia Mokdad</h2>
-        <q>Tik Tak</q>
-
-        <h2>Sofiane Mouadeb</h2>
-        <q>Denonciation of the current world</q>
-
-        <h2>Evan Moulin</h2>
-        <q>What have we become ?</q>
-
-        <h2>Marie-Claire Naze</h2>
-        <q>Time Loop</q>
-
-        <h2>Yassir Ouadghiri</h2>
-        <q>FF all time</q>
-
-        <h2>Marion Mura</h2>
-        <q>mind-interest</q>
+        <section class="section__AutresProjets">
+            <h2>Romane Miguel</h2>
+            <q class="q1">What it was to be eighteen</q>
+    
+            <h2>Leopold Ohnimus</h2>
+            <q>Korean Notes</q>
+    
+            <h2>Marwa Nezzar</h2>
+            <q>Kairos</q>
+    
+            <h2>Yann Pernette</h2>
+            <q>Continuons Evolution</q>
+    
+            <h2>Alban Luc</h2>
+            <q>Vers un monde utopique ?</q>
+    
+            <h2>Arilès Messaoudi</h2>
+            <q>A quoi ressemblera le monde</q>
+    
+            <h2>Camilia Mokdad</h2>
+            <q>Tik Tak</q>
+    
+            <h2>Sofiane Mouadeb</h2>
+            <q>Denonciation of the current world</q>
+    
+            <h2>Evan Moulin</h2>
+            <q>What have we become ?</q>
+    
+            <h2>Marie-Claire Naze</h2>
+            <q>Time Loop</q>
+    
+            <h2>Yassir Ouadghiri</h2>
+            <q>FF all time</q>
+    
+            <h2>Marion Mura</h2>
+            <q>mind-interest</q>
+        </section>
     </main>
     
-    <footer>
-        <p>POUPON Thomas - B2</p>
-        <q>Projet réalisé dans le cadre d'un exercice pédagogique au département <a href="http://mmimontbeliard.com/">MMI de Montbéliard</a></q>
-        <a href="mailto:thomaspoupon39270@gmail.com">Envoyer un mail</a>
-        <ul>
-            <li><a href="https://www.instagram.com/_thomas_ppn_/"><img src="/public/icone/instagram.svg" alt="lien Instagram pour me suivre"></a></li>
-            <li><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/"><img src="/public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre"></a></li>
+    <footer class="footer">
+        <p class="footer__name">POUPON Thomas - B2</p>
+        <q class="footer__quote">Projet réalisé dans le cadre d'un exercice pédagogique au département <a href="http://mmimontbeliard.com/" class="footer__link">MMI de Montbéliard</a></q>
+        <a href="mailto:thomaspoupon39270@gmail.com" class="footer__mailto"><p>Envoyer un mail</p></a>
+        <ul class="footer__list">
+            <li class="footer__item"><a href="https://www.instagram.com/_thomas_ppn_/" class="footer__link"><img src="/public/icone/instagram.svg" alt="lien Instagram pour me suivre" class="footer__icn"></a></li>
+            <li class="footer__item"><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/" class="footer__link"><img src="/public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre" class="footer__icn"></a></li>
         </ul>
     </footer>
 
