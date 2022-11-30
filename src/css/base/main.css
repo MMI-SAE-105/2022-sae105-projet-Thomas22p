@@ -39,15 +39,20 @@ a:hover {
 
 .main__article {
     padding-top: 30px;
-    margin-bottom: 30px;
     border-top: 1px solid var(--noir);
     
 }
 
+.article__p {
+
+}
+
 .main__article--span {
-    display: flex;
-    justify-content: end;
+    margin: 0;
+    padding-right: 10px;
+    display: inline;
+    margin-left: 60px;
     color: var(--bleu-clair);
     font-family: var(--linear);
-    font-size: var(--s);
+    font-size: var(--s)
 }
