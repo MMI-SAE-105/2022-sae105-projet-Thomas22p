@@ -28,7 +28,9 @@ a:hover {
     text-decoration: underline;
 }
 
+/* page d'accueil */
 .main {
+    background-color: var(--fond);
     padding: 0 20px;
     padding-top: 110px;
 }
@@ -105,6 +107,7 @@ a:hover {
     font-size: var(--s)
 }
 
+/* page à propos */
 .propos__p1 {
     margin-bottom: 20px;
     line-height: 145%;
@@ -115,7 +118,7 @@ a:hover {
     line-height: 145%;
 }
 
-
+/* page autre projets */
 .section__AutresProjets {
     display: flex;
     align-items: center;
@@ -130,9 +133,13 @@ a:hover {
     line-height: 145%;
 }
 
+/* page glossaire */
 .glossaire__item {
     margin-bottom: 40px;
 }
+
+/* page contact */
+
 
 display: grid; 
 grid-area: 1/1/7/3

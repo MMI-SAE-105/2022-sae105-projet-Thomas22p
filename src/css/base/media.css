@@ -9,3 +9,10 @@ img {
     display: block;
     margin: 0 auto;
 }
+
+.contact__img {
+    max-width: 215px 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
