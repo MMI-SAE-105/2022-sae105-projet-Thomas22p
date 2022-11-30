@@ -115,10 +115,20 @@ a:hover {
     line-height: 145%;
 }
 
+
 .section__AutresProjets {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5  px;
 }
 
+.quote {
+    margin-bottom: 30px;
+    font-family: var(--linear);
+    font-size: var(--s);
+    line-height: 145%;
+}
 
 display: grid; 
 grid-area: 1/1/7/3
