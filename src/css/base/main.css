@@ -5,8 +5,12 @@ p {
 
 h1 {
     font-family: var(--linear);
-    font-style: medium;
     font-size: var(--l);
+    font-style: medium;
+    color: var(--noir);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 h2 {
@@ -31,4 +35,19 @@ a:hover {
 .main__langue {
     display: flex;
     margin: 0 0 0 290px;
+}
+
+.main__article {
+    padding-top: 30px;
+    margin-bottom: 30px;
+    border-top: 1px solid var(--noir);
+    
+}
+
+.main__article--span {
+    display: flex;
+    justify-content: end;
+    color: var(--bleu-clair);
+    font-family: var(--linear);
+    font-size: var(--s);
 }
