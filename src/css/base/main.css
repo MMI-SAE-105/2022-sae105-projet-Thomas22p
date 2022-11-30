@@ -1,6 +1,7 @@
 p {
     font-family: var(--linear);
     font-size: var(--s);
+    line-height: 145%;
 }
 
 h1 {
@@ -103,3 +104,16 @@ a:hover {
     font-family: var(--linear);
     font-size: var(--s)
 }
+
+.propos__p1 {
+    margin-bottom: 20px;
+    line-height: 145%;
+}
+
+.propos__p2 {
+    margin-bottom: 30px;
+    line-height: 145%;
+}
+
+display: grid; 
+grid-area: 1/1/7/3
