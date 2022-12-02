@@ -18,7 +18,7 @@
     z-index: 1;
 }
 
-button {
+.header__menuBtn {
     border: none;
     background: transparent;
     position: absolute;
