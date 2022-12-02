@@ -17,6 +17,7 @@ h1 {
 h2 {
     font-family: var(--linear);
     font-size: var(--m);
+    margin-bottom: 10px;
 }
 
 a {
@@ -45,7 +46,6 @@ a:hover {
     border-top: 1px solid var(--noir);
     
 }
-
 
 .article__span1 {
     margin: 0;
@@ -105,6 +105,16 @@ a:hover {
     color: var(--bleu-clair);
     font-family: var(--linear);
     font-size: var(--s)
+}
+
+.main__article6 {
+    padding-top: 30px;
+    border-top: 1px solid var(--noir);
+    margin-bottom: 50px;
+}
+
+.article__p {
+    margin-top: 10px;
 }
 
 /* page à propos */
