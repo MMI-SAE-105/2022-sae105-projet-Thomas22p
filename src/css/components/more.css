@@ -1,1 +1,22 @@
 /* mettre la class more (Plus d'articles) */
+
+
+.more__title {
+    display: flex;
+    justify-content: start;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    font-family: var(--linear);
+    font-size: var(--m);
+    color: var(--noir);
+}
+
+.more__article1 {
+    padding-top: 10px;
+}
+
+.more__article2 {
+    padding-top: 30px;
+    border-top: 1px solid var(--noir);
+    margin-bottom: 40px;
+}

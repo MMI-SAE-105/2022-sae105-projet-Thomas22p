@@ -217,8 +217,36 @@ a:hover {
 }
 
 .article__colisée {
+    margin: 40px 0;
+}
+
+.img__neron {
+    display: block;
+    width: 300px;
+    height: auto;
+}
+
+.article__legende {
+    color: rgb(87, 87, 87);
+    font-size: var(--xs);
+    margin: 5px 0 0 5px;
+}
+
+.article__titre {
     margin-top: 40px;
 }
+
+.link__visit {
+    display: flex;
+    justify-content: center;
+    font-family: var(--linear);
+    font-size: var(--m);
+    margin: 30px;
+    text-decoration: underline 1px;
+}
+
+
+
 
 /* page article gladiator */
 
@@ -231,5 +259,6 @@ a:hover {
 /* page article musique */
 
 
-display: grid; 
-grid-area: 1/1/7/3
+/* display: grid;  */
+/* grid-area: 1/1/7/3 */
+/* faire plutot avec display flex et flex wrap (comme dans le tp BB brands)s */
