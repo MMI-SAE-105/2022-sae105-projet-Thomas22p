@@ -36,3 +36,9 @@ img {
     height: 160px;
 }
 
+.img__album {
+    display: inline;
+    width: 150px;
+    height: auto;
+}
+

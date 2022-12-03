@@ -132,6 +132,27 @@ a:hover {
     text-align: center;
 }
 
+.article__list {
+    list-style-type: '-   ';
+    font-family: var(--linear);
+    font-size: var(--s);
+    line-height: 145%;
+}
+
+.article__item {
+    margin: 10px 0;
+}
+
+.article__list--titre {
+    display: inline;
+    margin: 0 5px 0 0;
+    font-family: var(--linear);
+    font-size: var(--s);
+    font-weight: normal;
+    line-height: 145%;
+    text-decoration: underline;
+}
+
 /* page à propos */
 .propos__p1 {
     margin-bottom: 20px;
@@ -174,6 +195,7 @@ a:hover {
 }
 
 .base__titre {
+    display: block;
     margin-bottom: 10px;
 }
 
@@ -240,6 +262,20 @@ a:hover {
     font-size: var(--xs);
     margin: 5px 0 0 5px;
 }
+
+/* 
+.article__img--album {
+    display: inline;
+    align-items: left;
+}
+
+.article__p--album {
+    display: inline;
+    align-items: right;
+    margin: 10px;
+    gap: 20px;
+} */
+
 
 .article__titre {
     margin-top: 40px;

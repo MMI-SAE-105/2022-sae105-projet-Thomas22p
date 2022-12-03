@@ -5,101 +5,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Last Time</title>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="icon" type="image/png" href="/public/icone/logo.svg">
 </head>
 
 <body>
-    <header>
+    <header class="header">
+        <div class="header__main">
+            <a href="/fr/index.html" class="header__icone">
+                <img src="/public/icone/logo.svg" alt="Logo Last Time" class="header__logo">
+            </a>
+    
+            <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
+                <img src="/public/icone/menu.svg" alt="Menu hamburger"></a>
+            </button>
+        </div>
         
-        <a href="/fr/index.html">
-            <img src="/public/icone/logo.svg" alt="Logo Last Time">
-        </a>
 
-        <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
-            <img src="/public/icone/menu.svg" alt="Menu hamburger"></a>
-        </button>
-
-        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
-            <ul>
-                <li><a href="/fr/index.html"><img src="/public/icone/articles.svg" alt=""> Articles</a>
-                    <ul>
-                      <li><a href="/fr/colisée.html">Le Colisée</a></li>
-                      <li><a href="/fr/gladiator.html">Gladiator</a></li>
-                      <li><a href="/fr/berserk.html">Berserk</a></li>
-                      <li><a href="/fr/espoir.html">L'espoir de la science</a></li>
-                      <li><a href="/fr/regret.html">Le danger de la science</a></li>
-                      <li><a href="/fr/kendrick.html">N95 de Kendrick Lamar</a></li>
+        <nav id="mainNav" x-show="menuIsOpen" class="header__menu">
+            <ul class="menu__list">
+                <li class="menu__article"><a href="/fr/index.html" class="menu__link"><img src="/public/icone/articles.svg" alt="articles" class="menu__article--icn"> Articles</a>
+                    <ul class="menu__article--list">
+                      <li class="menu__item"><a href="/fr/colisée.html" class="menu__link">Le Colisée</a></li>
+                      <li class="menu__item"><a href="/fr/gladiator.html" class="menu__link">Gladiator</a></li>
+                      <li class="menu__item"><a href="/fr/berserk.html" class="menu__link">Berserk</a></li>
+                      <li class="menu__item"><a href="/fr/espoir.html" class="menu__link">L'espoir de la science</a></li>
+                      <li class="menu__item"><a href="/fr/regret.html" class="menu__link">Le danger de la science</a></li>
+                      <li class="menu__item"><a href="/fr/kendrick.html" class="menu__link">N95 de Kendrick Lamar</a></li>
                     </ul>
                 </li>
-                <li><a href="/fr/contact.html"><img src="/public/icone/contact.svg" alt="contactez-moi">Contact</a></li>
-                <li><a href="/fr/autres_projets.html"><img src="/public/icone/autres projets.svg" alt="">Autres projets</a></li>
+                <li class="menu__contact"><a href="/fr/contact.html" class="menu__link"><img src="/public/icone/contact.svg" alt="contactez-moi" class="menu__article--icn">Contact</a></li>
+                <li class="menu__projets"><a href="/fr/autres_projets.html" class="menu__link"><img src="/public/icone/autres projets.svg" alt="autres projets" class="menu__article--icn">Autres projets</a></li>
 
-                <li><a href="/fr/a_propos.html">A propos</a></li>
-                <li><a href="/fr/glossaire.html">Glossaire</a></li>
+                <li class="menu__propos"><a href="/fr/a_propos.html" class="menu__link--propos">A propos</a></li>
+                <li class="menu__glossaire"><a href="/fr/glossaire.html" class="menu__link--glossaire">Glossaire</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <img src="/public/icone/chevron.svg" alt="retouren arrière">
-        <a href="/en/kendrick.html"><img src="/public/icone/langue EN.svg" alt="lire en anglais"></a>
+    <main class="main">
+        <a href="/en/kendrick.html" class="main__langue"><img src="/public/icone/langue EN.svg" alt="lire en anglais"></a>
 
-        <section>
-            <h1>Take off the evil</h1>
-            <h1>Take off the illusion</h1>
-            <img src="/public/icone/horloge.svg" alt="Temps de lecture">
-            <p>Temps de lecture : 5 min</p>
-            <img src="/public/img/musique.webp" alt="kendrick">
-            <p>Dans N95, Kendrick Lamar a beaucoup de choses à dire et aborde les différents maux qui menacent la société. A travers cette musique, il nous donne un aperçu de sa vie, avec les traumatismes qu’il a vécu et les difficultés qu’il traverse.</p>
+        <section class="base">
+            <h1 class="base__titre">Take off the evil<br>Take off the illusion</h1>
+            <div class="base__temps">
+                <img src="/public/icone/horloge.svg" alt="Temps de lecture" class="base__horloge">
+                <p class="base__minute">Temps de lecture : 5 min</p>
+            </div>
+            <img src="/public/img/musique.webp" alt="kendrick" class="base__img">
+            <p class="base__intro">Dans N95, Kendrick Lamar a beaucoup de choses à dire et aborde les différents maux qui menacent la société. A travers cette musique, il nous donne un aperçu de sa vie, avec les traumatismes qu’il a vécu et les difficultés qu’il traverse.</p>
         </section>
 
-        <section>
-
+        <section class="article">
             mettre la vidéo du clip
-            <h2>Sortir de l’ombre</h2>
+            <h2 class="article__titre">Sortir de l’ombre</h2>
             <p>Kendrick Lamar est un rappeur très connu et respecté. Né le 17 juin 1987 à Compton en Californie, il est rappeur, réalisateur artistique et acteur. Il commence sa carrière de rappeur en 2003 avec sa première mixtape, à l'âge de 16 ans. Il signera ensuite un contrat avec Top Dawg Entertainment pour créer et publier sa deuxième mixtape, Training Day.
                 Mais c'est seulement en 2010, que Lamar commence sérieusement à se faire connaître avec son morceau Ignorance Is Bliss, qui attirera l'attention des célèbres rappeurs Dr. Dre et de Snoop Dog.
             </p>
-            <h2>Anecdote :</h2>
+            <h2 class="article__titre">Anecdote :</h2>
             <p>Après avoir travaillé avec Kendrick Lamar et participer à son développement, Snoop Dog le considère comme un roi du rap. Dans une interview, il dit :</p>
-            <q>J'ai fait mon truc pendant 20 ans environ en tant que roi de la côte Ouest, j'ai donné la couronne à Kendrick Lamar, enfin je ne lui ai pas donnée ; à vrai dire, il l'a prise, mais je devais l'enlever de ma tête et la lui donner.</q>
-            <h2>Sa résurrection en musique</h2>
+            <p class="article__q">"J'ai fait mon truc pendant 20 ans environ en tant que roi de la côte Ouest, j'ai donné la couronne à Kendrick Lamar, enfin je ne lui ai pas donnée ; à vrai dire, il l'a prise, mais je devais l'enlever de ma tête et la lui donner."</p>
+            <h2 class="article__titre">Sa résurrection en musique</h2>
             <p>En 2022, il revient en solo après 4 ans sans album, son dernier étant Black Panther, un album en collaboration avec plusieurs artistes, qui constitue la bande son du film Black Panther de Marvel Studios. Il sort donc son cinquième album Mr. Morale & the Big Steppers, un volet très important de sa discographie et sûrement le plus intimiste.</p>
-            <img src="/public/img/album.webp" alt="album de Kendrick Lamar">
-            <p>Dans cet album, une musique connue des Etats-Uni s’intitule N95, ou il y rappe sur des thèmes comme la superficialité, la manipulation des médias, la politique, le système ou encore l'hypocrisie. 
-                Le rappeur s'attaque à tout en variant de style, il fait en quelque sorte un featuring en étant seul. 
-                En effet le critique musical Alexis Petridis a rapporté que
-            </p>
-            <q>le ton de sa prestation change si radicalement et si souvent qu’il ressemble moins à l’œuvre d’un homme qu’à une série d’apparitions en tant qu’invité</q>
+            <div class="article__text--album">
+                <img src="/public/img/album.webp" alt="album de Kendrick Lamar" class="article__img img__album">
+                <p class="article__p--album">Dans cet album, une musique connue des Etats-Uni s’intitule N95, ou il y rappe sur des thèmes comme la superficialité, la manipulation des médias, la politique, le système ou encore l'hypocrisie. 
+                    Le rappeur s'attaque à tout en variant de style, il fait en quelque sorte un featuring en étant seul. 
+                    En effet le critique musical Alexis Petridis a rapporté que
+                </p>
+            </div>
+            
+            <p class="article__q">"Le ton de sa prestation change si radicalement et si souvent qu’il ressemble moins à l’œuvre d’un homme qu’à une série d’apparitions en tant qu’invité"</p>
         </section>
 
-        <section>
-            <h3>PLUS D'ARTICLES</h3>
-            <article>
+        <section class="more">
+            <h3 class="more__title">PLUS D'ARTICLES</h3>
+            <article class="more__article1">
                 <a href="/fr/espoir.html">
-                    <img src="/public/img/espoir.webp" alt="L'espoir de la science">
+                    <img src="/public/img/espoir.webp" alt="L'espoir de la science" class="img__article">
                     <h2>De découverte en découverte : les avantages de la science.</h2>
-                    <p>La science a toujours été au centre de notre quotidien. Le monde d’aujourd’hui ...     voir plus</p>
+                    <p class="article__p">La science a toujours été au centre de notre quotidien. Le monde d’aujourd’hui... <span class="article__span4">voir plus</span></p>
                 </a>
             </article>
-            <article>
+            <article class="more__article2">
                 <a href="/fr/regret.html">
-                    <img src="/public/img/regret.webp" alt="Le danger de la science">
+                    <img src="/public/img/regret.webp" alt="Le danger de la science"class="img__article">
                     <h2>Du côté obscur de la science.</h2>
-                    <p>La science a toujours été au centre de notre quotidien. Que nous soyons dans le métro ou dans notre voiture, en train de ...         voir plus</p>
+                    <p class="article__p">La science a toujours été au centre de notre quotidien. Que nous soyons dans le métro ou dans notre voiture, en train de ...<span class="article__span5">voir plus</span></p>
                 </a>
             </article>
         </section>
     </main>
 
-    <footer>
-        <p>POUPON Thomas - B2</p>
-        <q>Projet réalisé dans le cadre d'un exercice pédagogique au département <a href="http://mmimontbeliard.com/">MMI de Montbéliard</a></q>
-        <a href="mailto:thomaspoupon39270@gmail.com">Envoyer un mail</a>
-        <ul>
-            <li><a href="https://www.instagram.com/_thomas_ppn_/"><img src="/public/icone/instagram.svg" alt="lien Instagram pour me suivre"></a></li>
-            <li><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/"><img src="/public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre"></a></li>
+    <footer class="footer">
+        <p class="footer__name">POUPON Thomas - B2</p>
+        <q class="footer__quote">Projet réalisé dans le cadre d'un exercice pédagogique au département <a href="http://mmimontbeliard.com/" class="footer__link">MMI de Montbéliard</a></q>
+        <a href="mailto:thomaspoupon39270@gmail.com" class="footer__mailto"><p>Envoyer un mail</p></a>
+        <ul class="footer__list">
+            <li class="footer__item"><a href="https://www.instagram.com/_thomas_ppn_/" class="footer__link"><img src="/public/icone/instagram.svg" alt="lien Instagram pour me suivre" class="footer__icn"></a></li>
+            <li class="footer__item"><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/" class="footer__link"><img src="/public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre" class="footer__icn"></a></li>
         </ul>
     </footer>
 </body>
