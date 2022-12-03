@@ -1,3 +1,7 @@
+body {
+    background-color: var(--fond);
+}
+
 p {
     font-family: var(--linear);
     font-size: var(--s);
@@ -115,6 +119,18 @@ a:hover {
 
 .article__p {
     margin-top: 10px;
+}
+
+.article__q {
+    font-size: var(--s);
+    font-style: italic;
+    margin: 30px 30px;
+    color: var(--noir);
+    line-height: 165%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
 }
 
 /* page à propos */
