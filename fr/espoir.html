@@ -5,95 +5,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Last Time</title>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="icon" type="image/png" href="/public/icone/logo.svg">
 </head>
 
 <body>
-    <header>
+    <header class="header">
+        <div class="header__main">
+            <a href="/fr/index.html" class="header__icone">
+                <img src="/public/icone/logo.svg" alt="Logo Last Time" class="header__logo">
+            </a>
+    
+            <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
+                <img src="/public/icone/menu.svg" alt="Menu hamburger"></a>
+            </button>
+        </div>
         
-        <a href="/fr/index.html">
-            <img src="/public/icone/logo.svg" alt="Logo Last Time">
-        </a>
 
-        <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
-            <img src="/public/icone/menu.svg" alt="Menu hamburger"></a>
-        </button>
-
-        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
-            <ul>
-                <li><a href="/fr/index.html"><img src="/public/icone/articles.svg" alt=""> Articles</a>
-                    <ul>
-                      <li><a href="/fr/colisée.html">Le Colisée</a></li>
-                      <li><a href="/fr/gladiator.html">Gladiator</a></li>
-                      <li><a href="/fr/berserk.html">Berserk</a></li>
-                      <li><a href="/fr/espoir.html">L'espoir de la science</a></li>
-                      <li><a href="/fr/regret.html">Le danger de la science</a></li>
-                      <li><a href="/fr/kendrick.html">N95 de Kendrick Lamar</a></li>
+        <nav id="mainNav" x-show="menuIsOpen" class="header__menu">
+            <ul class="menu__list">
+                <li class="menu__article"><a href="/fr/index.html" class="menu__link"><img src="/public/icone/articles.svg" alt="articles" class="menu__article--icn"> Articles</a>
+                    <ul class="menu__article--list">
+                      <li class="menu__item"><a href="/fr/colisée.html" class="menu__link">Le Colisée</a></li>
+                      <li class="menu__item"><a href="/fr/gladiator.html" class="menu__link">Gladiator</a></li>
+                      <li class="menu__item"><a href="/fr/berserk.html" class="menu__link">Berserk</a></li>
+                      <li class="menu__item"><a href="/fr/espoir.html" class="menu__link">L'espoir de la science</a></li>
+                      <li class="menu__item"><a href="/fr/regret.html" class="menu__link">Le danger de la science</a></li>
+                      <li class="menu__item"><a href="/fr/kendrick.html" class="menu__link">N95 de Kendrick Lamar</a></li>
                     </ul>
                 </li>
-                <li><a href="/fr/contact.html"><img src="/public/icone/contact.svg" alt="contactez-moi">Contact</a></li>
-                <li><a href="/fr/autres_projets.html"><img src="/public/icone/autres projets.svg" alt="">Autres projets</a></li>
+                <li class="menu__contact"><a href="/fr/contact.html" class="menu__link"><img src="/public/icone/contact.svg" alt="contactez-moi" class="menu__article--icn">Contact</a></li>
+                <li class="menu__projets"><a href="/fr/autres_projets.html" class="menu__link"><img src="/public/icone/autres projets.svg" alt="autres projets" class="menu__article--icn">Autres projets</a></li>
 
-                <li><a href="/fr/a_propos.html">A propos</a></li>
-                <li><a href="/fr/glossaire.html">Glossaire</a></li>
+                <li class="menu__propos"><a href="/fr/a_propos.html" class="menu__link--propos">A propos</a></li>
+                <li class="menu__glossaire"><a href="/fr/glossaire.html" class="menu__link--glossaire">Glossaire</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <img src="/public/icone/chevron.svg" alt="retouren arrière">
-        <a href="/en/espoir.html"><img src="/public/icone/langue EN.svg" alt="lire en anglais"></a>
+    <main class="main">
+        <a href="/en/espoir.html" class="main__langue"><img src="/public/icone/langue EN.svg" alt="lire en anglais"></a>
 
-        <section>
-            <h1>De découverte en déc- ouverte : les avantages de la science. </h1>
-            <img src="/public/icone/horloge.svg" alt="Temps de lecture">
-            <p>Temps de lecture : 3 min</p>
+        <section class="base">
+            <h1 class="base__titre">De découverte en déc- ouverte : les avantages de la science. </h1>
+            <div class="base__temps">
+                <img src="/public/icone/horloge.svg" alt="Temps de lecture" class="base__horloge">
+                <p class="base__minute">Temps de lecture : 3 min</p>
+            </div>
+            
             <img src="/public/img/espoir.webp" alt="espoir">
-            <p>La science a toujours été au centre de notre quotidien. Le monde d’aujourd’hui a beaucoup progressé grâce à la science et est grandement axé sur ce progrès. Les avancées scientifiques facilitent nos vies et deviennent de plus en plus avancées.</p>
+            <p class="base__intro">La science a toujours été au centre de notre quotidien. Le monde d’aujourd’hui a beaucoup progressé grâce à la science et est grandement axé sur ce progrès. Les avancées scientifiques facilitent nos vies et deviennent de plus en plus avancées.</p>
         </section>
 
-        <section>
-            <h2>Les avancés scientifiques est leurs origines</h2>
+        <section class="article">
+            <h2 class="article__titre">Les avancés scientifiques est leurs origines</h2>
             <p>Depuis que la vie est apparue sur Terre, le monde a connu de nombreuses avancés scientifiques. 
                 Quelques avancées majeures : 
                 - l'invention de l'écriture : Retrouvé dans des fouilles archéologiques en Mésopotamie, des tablettes d’argiles était gravées dans le but de communiquer il y plus de 5 000ans.
                 - la photographie : Se basant sur le fonctionnement de l’œil humain. Au IVe siècle avant J-C, Aristote, philosophe grec, découvre que la lumière entrant dans une pièce sombre par un petit trou projette sur le mur d’en face l’image inversée des objets placés devant l’orifice. C’est la « Camera obscura » et c’est ce qui donnera vie plus tard à la photographie.
                 - la conquête spatiale : Les premiers pas de Neil Armstrong sur le sol lunaire le 20 juillet 1969 était une mission aussi exceptionnelle que périlleuse.
             </p>
-            <img src="/public/img/espace.webp" alt="un astronaute dans l'espace">
-            <h2>Anecdote :</h2>
+            <img src="/public/img/espace.webp" alt="un astronaute dans l'espace" class="article__img img__berserk">
+            <h2 class="article__titre">Anecdote :</h2>
             <p>Selon certaines études, la première grande découverte de l'histoire humaine serait la domestication du mouton en - 9 000 av. J.-C. Ce qui a permis aux hommes préhistoriques de pouvoir s'alimenter, de créer des habits, des outils et etc.</p>
-            <h2>La parcours de la médecine</h2>
+            <h2 class="article__titre">La parcours de la médecine</h2>
             <p>Plus précisément en médecine, améliore la qualité de vie. Par exemple, la première greffe d’organe a eu lieu en 1954 par le chirurgien Joseph Murray. Ce fut une première pour l’histoire de la médecine. De nos jours, la greffe d’organe a bien évolué. En effet, on est maintenant capable de greffer un organe d’un animal sur un humain. Ainsi, une greffe d’un cœur de cochon cochon sur un humain a été réalisée en septembre 2021.</p>
         </section>
 
-        <section>
-            <h3>PLUS D'ARTICLES</h3>
-            <article>
+        <section class="more">
+            <h3 class="more__title">PLUS D'ARTICLES</h3>
+            <article class="more__article1">
                 <a href="/fr/regret.html">
-                    <img src="/public/img/regret.webp" alt="Le danger de la science">
+                    <img src="/public/img/regret.webp" alt="Le danger de la science"class="img__article">
                     <h2>Du côté obscur de la science.</h2>
-                    <p>La science a toujours été au centre de notre quotidien. Que nous soyons dans le métro ou dans notre voiture, en train de ...         voir plus</p>
+                    <p class="article__p">La science a toujours été au centre de notre quotidien. Que nous soyons dans le métro ou dans notre voiture, en train de ...<span class="article__span5">voir plus</span></p>
                 </a>
             </article>
-            <article>
+            <article class="more__article2">
                 <a href="/fr/kendrick.html">
-                    <img src="/public/img/musique.webp" alt="N95 de Kendrick Lamar">
+                    <img src="/public/img/musique.webp" alt="N95 de Kendrick Lamar" class="img__article">
                     <h2>Take off the evil, take off the illusion </h2>
-                    <p>Dans N95, Kendrick Lamar a beaucoup de choses à dire et aborde les différents maux qui menacent la société. A travers ce ...       voir plus</p>
+                    <p class="article__p">Dans N95, Kendrick Lamar a beaucoup de choses à dire et aborde les différents maux qui menacent la société. A travers ce ...<span class="article__span6">voir plus</span></p>
                 </a>
             </article>
         </section>
     </main>
 
-    <footer>
-        <p>POUPON Thomas - B2</p>
-        <q>Projet réalisé dans le cadre d'un exercice pédagogique au département <a href="http://mmimontbeliard.com/">MMI de Montbéliard</a></q>
-        <a href="mailto:thomaspoupon39270@gmail.com">Envoyer un mail</a>
-        <ul>
-            <li><a href="https://www.instagram.com/_thomas_ppn_/"><img src="/public/icone/instagram.svg" alt="lien Instagram pour me suivre"></a></li>
-            <li><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/"><img src="/public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre"></a></li>
+    <footer class="footer">
+        <p class="footer__name">POUPON Thomas - B2</p>
+        <q class="footer__quote">Projet réalisé dans le cadre d'un exercice pédagogique au département <a href="http://mmimontbeliard.com/" class="footer__link">MMI de Montbéliard</a></q>
+        <a href="mailto:thomaspoupon39270@gmail.com" class="footer__mailto"><p>Envoyer un mail</p></a>
+        <ul class="footer__list">
+            <li class="footer__item"><a href="https://www.instagram.com/_thomas_ppn_/" class="footer__link"><img src="/public/icone/instagram.svg" alt="lien Instagram pour me suivre" class="footer__icn"></a></li>
+            <li class="footer__item"><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/" class="footer__link"><img src="/public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre" class="footer__icn"></a></li>
         </ul>
     </footer>
 </body>
