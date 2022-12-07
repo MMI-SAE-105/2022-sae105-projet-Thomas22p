@@ -355,7 +355,15 @@ a:hover {
 .article__titre {
     margin-top: 40px;
 }
-.article::first-line {}
+.article__titre {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 10px;
+    background-color: var(--orange);
+    z-index: 1;
+}
 
 /* mettre couleur orange sous les h2 */
 
@@ -384,6 +392,7 @@ a:hover {
 
 
 /* page 404 */
+
 
 /* display: grid;  */
 /* grid-area: 1/1/7/3 */

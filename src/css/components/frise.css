@@ -1,0 +1,37 @@
+.frise {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.article__btn2 {
+    display: inline;
+    align-items: left;
+    margin: 0 20px 0px 40px;
+    padding: 3px 35px;
+    border: 1px solid var(--noir);
+    border-radius: 24px;
+    background-color: #D9D9D9;
+    font-family: var(--linear);
+    font-size: var(--s);
+    font-weight: bold;
+    color: var(--noir);
+    text-decoration: none;
+}
+
+.frise__btn2 {
+    display: inline;
+    align-items: left;
+    margin-right: 40px;
+    padding: 3px 35px;
+    border: 1px solid var(--noir);
+    border-radius: 24px;
+    background-color: var(--orange);
+    font-family: var(--linear);
+    font-size: var(--s);
+    font-weight: bold;
+    color: var(--noir);
+    text-decoration: none;
+}
+
