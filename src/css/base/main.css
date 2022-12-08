@@ -355,7 +355,8 @@ a:hover {
 .article__titre {
     margin-top: 40px;
 }
-.article__titre {
+
+.article__titre::after{
     content: "";
     display: block;
     position: absolute;

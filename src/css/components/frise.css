@@ -35,3 +35,48 @@
     text-decoration: none;
 }
 
+.frise__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.frise__text {
+    display: inline;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+}
+
+.frise__img {
+    width: 121px;
+    height: 162px;
+    display: inline;
+    justify-content: start;
+    align-items: left;
+    margin: 0;
+}
+
+.frise__subtitle {
+    font-family: var(--linear);
+    font-size: var(--m);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.frise__date {
+    font-family: var(--linear);
+    font-size: var(--s);
+    margin-bottom: 40px;
+}
+
+.frise__3D {
+    font-family: var(--linear);
+    font-size: var(--s);
+    color: #938A8A;
+}
