@@ -26,25 +26,42 @@
     display: inline;
     right: 20px;
     position: absolute;
+    z-index: 0;
 }
 
 .film__grid {
     display: flex;
     flex-wrap: wrap;
     margin-top: 40px;
-    gap: 5%;
+    gap: 10%;
 }
 
 .film__article {
     flex: 1 0 40%;
     display: flex;
     justify-content: center;
+    
 }
 
 .film__article--link {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     color: var(--noir);
+}
+
+.film__article--title {
+    display: flex;
+    text-align: center;
+    font-family: var(--linear);
+    font-size: var(--s);
+    font-weight: medium;
+    margin: 0;
+    margin-top: 15px;
+}
+
+.film__article--date {
+    font-family: var(--linear);
+    margin-bottom: 30px;
+    margin-top: 10px;
 }
