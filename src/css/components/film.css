@@ -1,0 +1,50 @@
+.film__title {
+    text-align: center;
+    font-family: var(--linear);
+    font-size: var(--m);
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+
+.film__subtitle {
+    display: inline;
+    font-family: var(--linear);
+    font-size: var(--s);
+    font-weight: bold;
+    margin: 0 30% 0 0;
+}
+
+.film__text {
+    display: inline;
+    margin: 0;
+    right: 60px;
+    position: absolute;
+}
+
+.film__arrow {
+    display: inline;
+    right: 20px;
+    position: absolute;
+}
+
+.film__grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    gap: 5%;
+}
+
+.film__article {
+    flex: 1 0 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.film__article--link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--noir);
+}
