@@ -356,17 +356,6 @@ a:hover {
     margin-top: 40px;
 }
 
-.article__titre::after{
-    content: "";
-    display: block;
-    position: absolute;
-    width: 200px;
-    height: 10px;
-    background-color: var(--orange);
-    z-index: 1;
-}
-
-/* mettre couleur orange sous les h2 */
 
 .article__link {
     display: flex;
