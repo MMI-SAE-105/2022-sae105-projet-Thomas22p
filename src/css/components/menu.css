@@ -1,64 +1,114 @@
 .header__menu {
     background-color: var(--bleu-foncé);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 93px;
-    right: 0;
-	width: 100%;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
 	max-width: 284px;
 	height: 100%;
-    right: -130px;
+}
+
+#mainNav {
+    position: fixed;
+    right: -284px;
+    width: 100%;
+	max-width: 284px;
+	height: 100%;
 	color: #222;
-    transform: translate(0, -130, 0);
-	transition: 5s ease-in-out;
     padding-top: 70px;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+}
+
+@-webkit-keyframes slide {
+    100% { right: 0; }
+}
+
+@keyframes slide {
+    100% { right: 0; }
 }
 
 .menu__list {
     list-style: none;
+
 }
 
 .menu__item {
     list-style: none;
+    font-weight: normal;
+    font-size: var(--s);
+    margin: 5px;
 }
 
+.menu__article {
+    text-decoration: none;
+}
+
+.menu__list--top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    font-size: var(--m2);
+    font-weight: bold;
+    gap: 25px;
+    padding-left: 0;
+    margin: 0;
+}
+
+.menu__list {
+    text-align: center;
+}
+
+.list__contact {
+    width: 230px;
+    padding: 0 20px 20px 20px;
+    border-bottom: 1px solid var(--blanc);
+}
+
+.list__article {
+    width: 230px;
+    padding: 20px;
+    border-bottom: 1px solid var(--blanc);
+}
+
+.menu__list--article {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.menu__list--bottom {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-top: 60px;
+    gap: 60px;
+}
 
 .menu__link {
     color: var(--blanc);
     text-decoration: none;
     font-size: var(--s);
     font-family: var(--linear);
-    font-style: medium;
     display: block;
     padding: 10px 20px;
 }
 
-.menu__propos {
-    display: flex;
-    padding: 10px 20px;
-    bottom: 20px;
-}
 .menu__link--propos {
     color: var(--blanc);
     text-decoration: none;
-    font-size: var(--xs);
+    font-size: var(--s);
     font-family: var(--linear);
-    font-style: medium;
 }
 
-.menu__glossaire {
-    display: flex;
-    padding: 10px 20px;
-    bottom: 20px;
-}
 .menu__link--glossaire {
     color: var(--blanc);
     text-decoration: none;
-    font-size: var(--xs);
+    font-size: var(--s);
     font-family: var(--linear);
-    font-style: medium;
 }
+
 
 /* faire des class secondaire (class="menu__link menu__link--main") */
 
