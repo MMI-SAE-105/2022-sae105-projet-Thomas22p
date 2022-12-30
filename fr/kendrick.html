@@ -8,6 +8,9 @@
     <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs"></script>
+    <link href="https://unpkg.com/cloudinary-video-player@1.9.4/dist/cld-video-player.min.css" 
+    rel="stylesheet">
+    <script src="https://unpkg.com/cloudinary-video-player@1.9.4/dist/cld-video-player.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="/src/css/style.css">
     <link rel="icon" type="image/png" href="/public/icone/logo.svg">
 </head>
@@ -60,11 +63,7 @@
         </section>
 
         <section class="article">
-            <video class="article__video" controls>
-                <source src="../public/video/clip_kendrick.mp4" type="video/mp4" >
-            </video>
-
-            <video class="article__video" src="../public/video/clip_kendrick.mp4" controls></video>
+            <video class="article__video" src="https://res.cloudinary.com/dkwk4kf9e/video/upload/v1672436888/video/clip_kendrick_zm4fb9.mp4" controls></video>
 
             <h2 class="article__titre">Sortir de l’ombre</h2>
             <p>Kendrick Lamar est un rappeur très connu et respecté. Né le 17 juin 1987 à Compton en Californie, il est rappeur, réalisateur artistique et acteur. Il commence sa carrière de rappeur en 2003 avec sa première mixtape, à l'âge de 16 ans. Il signera ensuite un contrat avec Top Dawg Entertainment pour créer et publier sa deuxième mixtape, Training Day.
@@ -114,5 +113,12 @@
             <li class="footer__item"><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/" class="footer__link"><img src="/public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre" class="footer__icn"></a></li>
         </ul>
     </footer>
+
+    <script>
+        var cld = cloudinary.videoPlayer('example-player', { 
+            cloud_name: 'dkwk4kf9e', //remplacer par votre id cloudinary 
+            sourceTypes: ['hls','dash','webm/vp9','mp4/h265','mp4']});
+        cld.source('video'); //à remplacer après avoir uploader une vidéo
+    </script>
 </body>
 </html>
