@@ -50,3 +50,11 @@ img {
     height: auto;
 }
 
+.article__video {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
