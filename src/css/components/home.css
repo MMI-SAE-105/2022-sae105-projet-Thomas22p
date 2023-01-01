@@ -1,6 +1,7 @@
 .home {
-    padding: 100px 0 0 0;
-    margin: 0;
+    position: relative; 
+    left: -20px;
+    top: -10px;
 }
 
 .home__slider {
@@ -14,9 +15,23 @@
 
 .slider {
     width: 375px;
-    animation: slide 20s infinite;
+    animation: slider 20s infinite;
     display: flex;
 }
+
+.home__slider ::after {
+    content: '';
+    display: block;
+    width: 3000px;
+    height: 70px;
+    background: linear-gradient(0deg, var(--fond), 2%, transparent),
+    url("public/image/linear_home.png");
+    position: absolute;
+    top: 160px;
+    left: 0;
+    z-index: 1;
+}
+
 
 .slider__item {
     margin: 0;
@@ -30,21 +45,30 @@
 
 
 
-@keyframes slide {
+@keyframes slider {
     0% {
         transform: translateX(0);
     }
-    20% {
-        transform: translateX(calc(-100vw + 40px - 80px));
+    12.5% {
+        transform: translateX( -100vw);
     }
-    40% {
-        transform: translateX(calc(-100vw*2 + 80px - 2*80px));
+    25%{
+        transform: translateX(calc( -100vw*2));
     }
-    60% {
-        transform: translateX(calc(-100vw*3 + 120px - 3*80px));
+    37.5% {
+        transform: translateX(calc( -100vw*3));
     }
-    80% {
-        transform: translateX(calc(-100vw*4 + 160px - 4*80px));
+    50% {
+        transform: translateX(calc( -100vw*4));
+    }
+    62.5% {
+        transform: translateX(calc( -100vw*5));
+    }
+    75% {
+        transform: translateX(calc( -100vw*6));
+    }
+    87.5% {
+        transform: translateX(calc( -100vw*7));
     }
     100% {
         transform: translateX(0);
