@@ -5,105 +5,130 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Last Time</title>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="icon" type="image/png" href="/public/icone/logo.svg">
 </head>
 
 <body>
-    <header>
-        <a href="index.html">
-            <img src="public/icone/logo.svg" alt="Logo Last Time">
-        </a>
+    <header class="header">
+        <div class="header__main">
+            <a href="/en/index.html" class="header__icone">
+                <img src="/public/icone/logo.svg" alt="Logo Last Time" class="header__logo">
+            </a>
+    
+            <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
+                <img src="/public/icone/menu.svg" alt="Menu hamburger">
+            </button>
+        </div>
+        
 
-        <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
-            <img src="public/icone/menu.svg" alt="Menu hamburger"></a>
-        </button>
-
-        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
-            <ul>
-                <li><a href="index.html"><img src="public/icone/articles.svg" alt=""> Articles</a>
-                    <ul>
-                      <li><a href="colisée.html">Le Colisée</a></li>
-                      <li><a href="gladiator.html">Gladiator</a></li>
-                      <li><a href="berserk.html">Berserk</a></li>
-                      <li><a href="espoir.html">L'espoir de la science</a></li>
-                      <li><a href="regret.html">Le danger de la science</a></li>
-                      <li><a href="kendrick.html">N95 de Kendrick Lamar</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact.html"><img src="public/icone/contact.svg" alt="contactez-moi">Contact</a></li>
-                <li><a href="autres_projets.html"><img src="public/icone/autres projets.svg" alt="">Autres projets</a></li>
-
-                <li><a href="a_propos.html">A propos</a></li>
-                <li><a href="glossaire.html">Glossaire</a></li>
+        <nav id="mainNav" x-show="menuIsOpen" class="header__menu">
+            <ul class="menu__list--top">
+                <li class="menu__list list__article"><a href="/fr/index.html" class="menu__link"><img src="/public/icone/articles.svg" alt="articles" class="menu__article--icn">Articles</a></li>
+                <ul class="menu__list--article">
+                    <li class="menu__item"><a href="/fr/colisée.html" class="menu__link">The Colosseum</a></li>
+                    <li class="menu__item"><a href="/fr/gladiator.html" class="menu__link">Gladiator</a></li>
+                    <li class="menu__item"><a href="/fr/berserk.html" class="menu__link">Berserk</a></li>
+                    <li class="menu__item"><a href="/fr/espoir.html" class="menu__link">The hope of science</a></li>
+                    <li class="menu__item"><a href="/fr/regret.html" class="menu__link">The regret of science</a></li>
+                    <li class="menu__item"><a href="/fr/kendrick.html" class="menu__link">N95 by Kendrick Lamar</a></li>
+                </ul>
+                <li class="menu__list list__contact"><a href="/fr/contact.html" class="menu__link"><img src="/public/icone/contact.svg" alt="contactez-moi" class="menu__article--icn">Contact</a></li>
+                <li class="menu__list list__projets"><a href="/fr/autres_projets.html" class="menu__link"><img src="/public/icone/autres_projets.svg" alt="autres projets" class="menu__article--icn">Other projects</a></li>
+            </ul>
+            <ul class="menu__list--bottom">
+                <li class="menu__item"><a href="/fr/a_propos.html" class="menu__link--propos">About</a></li>
+                <li class="menu__item"><a href="/fr/glossaire.html" class="menu__link--glossaire">Glossary</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <img src="public/icone/chevron.svg" alt="retouren arrière">
-        <img src="/public/icone/langue EN.svg" alt="lire en anglais">
 
-        <section>
-            <h1>Prêt à combattre ?</h1>
-            <img src="public/icone/horloge.svg" alt="Temps de lecture">
-            <p>Temps de lecture : 5 min</p>
-            <img src="public/img/gladiator.webp" alt="Gladiator">
-            <p>Gladiator est un film de fiction historique revisitant la chute de l’Empire romain. Il est réalisé par le cinéaste Ridley Scott, réalisateur de plusieurs films cultes.</p>
-        </section>
-        <a href="ridleyScott.html"><img src="public/img/ridley bouton.webp" alt="Ridley Scott">Ridley Scott</a>
+    <main class="main">
+        <a href="/fr/gladiator.html" class="main__langue"><img src="/public/icone/langueFR.svg" alt="voir en Français"></a>
 
-        <section>
-            <h2>Le prodigieux Ridley Scott</h2>
-            <p>Ridley Scott est réalisateur et producteur britannique. Il est le réalisateur du film Gladiator.
-                Après un passage à vide dans les années 90, le cinéaste britannique revient sur le devant de la scène avec Galdiator. Cet homme se met en tête de réaliser un péplum, un genre de fiction historique, alors que le genre est quasiment tombé dans l'oubli à l'époque. Ce film a connu un énorme succès ainsi que de nombreuses critiques élogieuses.
-                Il devient un réalisateur remarquable avec beaucoup de talent et de passion pour le métier. On le voit par exemple avec Blade Runner, un classique des films de science-fiction des années 80, American Gangster, film sur la mafia ou encore Black Hawk Down qui raconte une mission spéciale des armées américaines. Cependant, Gladiator est un de ses chefs d'œuvres.
+        <section class="base">
+            <h1  class="base__titre">Ready to fight?</h1>
+            <div class="base__temps">
+                <img class="base__horloge" src="/public/icone/horloge.svg" alt="Temps de lecture">
+                <p class="base__minute">Reading time : 5 min </p>
+            </div>
+            <img class="base__img" src="/public/img/gladiator.webp" alt="Le Colisée">
+            <p class="base__intro">Gladiator is a historical fiction film revisiting the fall of the Roman Empire. It is directed by 
+                filmmaker Ridley Scott, director of several cult films. 
             </p>
-            <h2>Les bons points du film</h2>
-            <p>Le scénario, la mise en scène, ainsi que les reconstitutions historiques sont crédibles et fascinantes. De plus les acteurs se donnent à fond pour un film qui ne devait pas connaitre un si grand succès. Cela donne des scènes épiques, grandioses et émouvantes. 
-                Les décors et les costumes sont fidèles et réalistes, rendant cette expérience encore plus plaisante.
-            </p>
-            <img src="public/img/image 17.webp" alt="décors du film">
-            <h2>Rivalité et vengeance</h2>
-            <p>Maximus Decimus Meridius, joué par Russel Crowe, est un général des armées romaines renommé et fidèle qui se voyait prendre la place de l’Empereur Marc Aurèle. 
-                À la suite de cette déclaration, Commode, fils de l’Empereur devient fou de rage, il tue son père et se proclame Empereur. Il demande ainsi l’exécution du général Maximus et de sa famille. 
-                Après cet événement, s’en suit une violente rivalité, mais fabuleuse.
-                
-                Lors d’un combat entre les deux personnages principaux, une phrase mythique du film est énoncé après un premier conflit. 
-            </p>
-            <q>Mon nom est Maximus Decimus Meridius, commandant en chef des armées du Nord, général des légions Felix, fidèle serviteur du vrai empereur Marc Aurèle. Père d'un fils assassiné, époux d'une femme assassinée, et j'aurai ma vengeance dans cette vie ou dans l'autre.</q>
-            <p>Devant ce tel affront, Commode demande un ultime combat. Mais qui va gagner ?</p>
-            <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=24944.html">Voir le résultat</a>
         </section>
 
-        <section>
-            <h3>PLUS D'ARTICLES</h3>
-            <article>
+        <a class="article__btn btn__RidleyScott" href="/fr/ridleyScott.html"><img class="img__article img__RidleyScott" src="/public/img/ridley_bouton.webp" alt="Ridley Scott">Ridley Scott</a>
+
+        <section class="article">
+            <h2 class="article__titre">The prodigious Ridley Scott</h2>
+            <p>idley Scott is a British director and producer. He is the director of the film Gladiator. 
+                After a hiatus in the 1990s, the British filmmaker returned to the forefront with Galdiator. He set out 
+                to make a peplum, a genre of historical fiction, which was almost forgotten at the time. The film was 
+                a huge success and received many rave reviews. 
+                He became a remarkable director with great talent and passion for the craft. We see him, for 
+                example, with Blade Runner, a classic science fiction film of the 1980s, American Gangster, a film 
+                about the mafia, or Black Hawk Down, which tells the story of a special mission of the American 
+                army. However, Gladiator is one of his masterpieces.
+            </p>
+            <h2 class="article__titre">The film's good points</h2>
+            <p>The script, the direction, as well as the historical reconstructions are credible and fascinating. 
+                Moreover, the actors give their all for a film that was not expected to be so successful. The result is 
+                epic, grandiose and moving scenes. 
+                The sets and costumes are faithful and realistic, making this experience even more enjoyable.
+            </p>
+            <img src="/public/img/decor_film.webp" alt="décors du film">
+            <h2 class="article__titre">Rivality and revenge</h2>
+            <p>Maximus Decimus Meridius, played by Russell Crowe, is a renowned and loyal general of the Roman 
+                armies who saw himself taking the place of Emperor Marcus Aurelius. 
+                Following this declaration, Commodus, son of the Emperor, becomes enraged, kills his father and 
+                proclaims himself Emperor. He then demanded the execution of General Maximus and his family. 
+                After this event, a violent but fabulous rivalry ensues. 
+
+                During a fight between the two main characters, a mythical phrase of the film is uttered after an 
+                initial conflict. 
+            </p>
+            <p class="article__q">"My name is Maximus Decimus Meridius, commander-in-chief of the northern armies, general of the 
+                Felix legions, faithful servant of the real emperor Marcus Aurelius. Father of a murdered son, 
+                husband of a murdered wife, and I shall have my revenge in this life or the next."
+            </p>
+            <p>Faced with such an affront, Commodus demands a final battle. But who will win?</p>
+            <a class="article__link link__visit" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=24944.html">See the result</a>
+        </section>
+
+        <section class="more">
+            <h1 class="more__title">MORE ARTICLES</h1>
+            <article class="more__article1">
                 <a href="colisée.html">
-                    <img src="public/img/colisée.webp" alt="Le Colisée">
-                    <h2>Le Colisé, un lieu culte et son histoire.</h2>
-                    <p>Le Colisée est le plus grand amphithéâtre de l’Antiquité. Situé dans le centre de Rome, il était à l’origine de grandes activités ...          voir plus</p>
+                    <img src="/public/img/colisée.webp" alt="Le Colisée">
+                    <h2>The Colosseum, a cult site and its history</h2>
+                    <p>Located in the center of Rome, it was the site of major events in the ...<span class="article__span2">see more</span></p>
                 </a>
             </article>
-            <article>
-                
-                <a href="berserk.html">
-                    <img src="public/img/berserk.webp" alt="Berserk">
-                    <h2>Une épopée sanglante : Berserk.</h2>
-                    <p>Berserk est un manga seinen de dark fantasy du mangaka Kentaro Miura. Il est inspiré de la période du moyen-âge Européen ...        voir plus</p>
+            <article class="more__article2">
+                <a href="/en/gladiator.html">
+                    <img src="/public/img/berserk.webp" alt="Berserk" class="img__article">
+                    <h2>A bloody epic: Berserk</h2>
+                    <p class="article__p">Berserk is a dark fantasy seinen manga by mangaka Kentaro Miura. It is inspired by the period of the 
+                        European Middle Ages ...<span class="article__span2">see more</span>
+                    </p>
                 </a>
             </article>
         </section>
     </main>
-
-    <footer>
-        <p>POUPON Thomas - B2</p>
-        <q>Projet réalisé dans le cadre d'un exercice pédagogique au département <a href="http://mmimontbeliard.com/">MMI de Montbéliard</a></q>
-        <a href="mailto:thomaspoupon39270@gmail.com">Envoyer un mail</a>
-        <ul>
-            <li><a href="https://www.instagram.com/_thomas_ppn_/"><img src="public/icone/instagram.svg" alt="lien Instagram pour me suivre"></a></li>
-            <li><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/"><img src="public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre"></a></li>
-        </ul>
-    </footer>
+    
+        <footer class="footer">
+            <p class="footer__name">POUPON Thomas - B2</p>
+            <q class="footer__quote">Project realised in the framework of a pedagogical exercise in the department <a href="http://mmimontbeliard.com/" class="footer__link">MMI of Montbéliard</a></q>
+            <a href="mailto:thomaspoupon39270@gmail.com" class="footer__mailto"><p>Send a mail</p></a>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="https://www.instagram.com/_thomas_ppn_/" class="footer__link"><img src="/public/icone/instagram.svg" alt="lien Instagram pour me suivre" class="footer__icn"></a></li>
+                <li class="footer__item"><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/" class="footer__link"><img src="/public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre" class="footer__icn"></a></li>
+            </ul>
+        </footer>
 </body>
 </html>

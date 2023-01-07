@@ -358,8 +358,10 @@ a:hover {
 }
 
 .article__titre {
-    margin-top: 40px;
+    margin-top: 20px;
+    padding-top: 20px;
 }
+
 
 
 .article__link {
