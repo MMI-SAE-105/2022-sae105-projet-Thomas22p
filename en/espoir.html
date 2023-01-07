@@ -5,95 +5,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Last Time</title>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="icon" type="image/png" href="/public/icone/logo.svg">
 </head>
 
 <body>
-    <header>
-        <a href="index.html">
-            <img src="public/icone/logo.svg" alt="Logo Last Time">
-        </a>
+    <header class="header">
+        <div class="header__main">
+            <a href="/en/index.html" class="header__icone">
+                <img src="/public/icone/logo.svg" alt="Logo Last Time" class="header__logo">
+            </a>
+    
+            <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
+                <img src="/public/icone/menu.svg" alt="Menu hamburger">
+            </button>
+        </div>
 
-        <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
-            <img src="public/icone/menu.svg" alt="Menu hamburger"></a>
-        </button>
-
-        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
-            <ul>
-                <li><a href="index.html"><img src="public/icone/articles.svg" alt=""> Articles</a>
-                    <ul>
-                      <li><a href="colisée.html">Le Colisée</a></li>
-                      <li><a href="gladiator.html">Gladiator</a></li>
-                      <li><a href="berserk.html">Berserk</a></li>
-                      <li><a href="espoir.html">L'espoir de la science</a></li>
-                      <li><a href="regret.html">Le danger de la science</a></li>
-                      <li><a href="kendrick.html">N95 de Kendrick Lamar</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact.html"><img src="public/icone/contact.svg" alt="contactez-moi">Contact</a></li>
-                <li><a href="autres_projets.html"><img src="public/icone/autres projets.svg" alt="">Autres projets</a></li>
-
-                <li><a href="a_propos.html">A propos</a></li>
-                <li><a href="glossaire.html">Glossaire</a></li>
+        <nav id="mainNav" x-show="menuIsOpen" class="header__menu">
+            <ul class="menu__list--top">
+                <li class="menu__list list__article"><a href="/fr/index.html" class="menu__link"><img src="/public/icone/articles.svg" alt="articles" class="menu__article--icn">Articles</a></li>
+                <ul class="menu__list--article">
+                    <li class="menu__item"><a href="/fr/colisée.html" class="menu__link">The Colosseum</a></li>
+                    <li class="menu__item"><a href="/fr/gladiator.html" class="menu__link">Gladiator</a></li>
+                    <li class="menu__item"><a href="/fr/berserk.html" class="menu__link">Berserk</a></li>
+                    <li class="menu__item"><a href="/fr/espoir.html" class="menu__link">The hope of science</a></li>
+                    <li class="menu__item"><a href="/fr/regret.html" class="menu__link">The regret of science</a></li>
+                    <li class="menu__item"><a href="/fr/kendrick.html" class="menu__link">N95 by Kendrick Lamar</a></li>
+                </ul>
+                <li class="menu__list list__contact"><a href="/fr/contact.html" class="menu__link"><img src="/public/icone/contact.svg" alt="contactez-moi" class="menu__article--icn">Contact</a></li>
+                <li class="menu__list list__projets"><a href="/fr/autres_projets.html" class="menu__link"><img src="/public/icone/autres_projets.svg" alt="autres projets" class="menu__article--icn">Other projects</a></li>
+            </ul>
+            <ul class="menu__list--bottom">
+                <li class="menu__item"><a href="/fr/a_propos.html" class="menu__link--propos">About</a></li>
+                <li class="menu__item"><a href="/fr/glossaire.html" class="menu__link--glossaire">Glossary</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <img src="public/icone/chevron.svg" alt="retouren arrière">
-        <img src="/public/icone/langue EN.svg" alt="lire en anglais">
+    <main class="main">
+        <a href="/fr/contact.html" class="main__langue"><img src="/public/icone/langueFR.svg" alt="voir en Français"></a>
 
-        <section>
-            <h1>De découverte en déc- ouverte : les avantages de la science. </h1>
-            <img src="public/icone/horloge.svg" alt="Temps de lecture">
-            <p>Temps de lecture : 3 min</p>
-            <img src="public/img/espoir.webp" alt="espoir">
-            <p>La science a toujours été au centre de notre quotidien. Le monde d’aujourd’hui a beaucoup progressé grâce à la science et est grandement axé sur ce progrès. Les avancées scientifiques facilitent nos vies et deviennent de plus en plus avancées.</p>
-        </section>
-
-        <section>
-            <h2>Les avancés scientifiques est leurs origines</h2>
-            <p>Depuis que la vie est apparue sur Terre, le monde a connu de nombreuses avancés scientifiques. 
-                Quelques avancées majeures : 
-                - l'invention de l'écriture : Retrouvé dans des fouilles archéologiques en Mésopotamie, des tablettes d’argiles était gravées dans le but de communiquer il y plus de 5 000ans.
-                - la photographie : Se basant sur le fonctionnement de l’œil humain. Au IVe siècle avant J-C, Aristote, philosophe grec, découvre que la lumière entrant dans une pièce sombre par un petit trou projette sur le mur d’en face l’image inversée des objets placés devant l’orifice. C’est la « Camera obscura » et c’est ce qui donnera vie plus tard à la photographie.
-                - la conquête spatiale : Les premiers pas de Neil Armstrong sur le sol lunaire le 20 juillet 1969 était une mission aussi exceptionnelle que périlleuse.
+        <section class="base">
+            <h1  class="base__titre">From discovery to discovery: the benefits of science</h1>
+            <div class="base__temps">
+                <img class="base__horloge" src="/public/icone/horloge.svg" alt="Temps de lecture">
+                <p class="base__minute"> Reading time : 3 min</p>
+            </div>
+            <img class="base__img" src="/public/img/espoir.webp" alt="Le Colisée">
+            <p class="base__intro">Science has always been at the center of our daily lives. Today's world has progressed a lot 
+                thanks to the science and is greatly focused on this progress. Scientific progress is making our 
+                lives easier and becoming more and more advanced
             </p>
-            <img src="public/img/espace.webp" alt="un astronaute dans l'espace">
-            <h2>Anecdote :</h2>
-            <p>Selon certaines études, la première grande découverte de l'histoire humaine serait la domestication du mouton en - 9 000 av. J.-C. Ce qui a permis aux hommes préhistoriques de pouvoir s'alimenter, de créer des habits, des outils et etc.</p>
-            <h2>La parcours de la médecine</h2>
-            <p>Plus précisément en médecine, améliore la qualité de vie. Par exemple, la première greffe d’organe a eu lieu en 1954 par le chirurgien Joseph Murray. Ce fut une première pour l’histoire de la médecine. De nos jours, la greffe d’organe a bien évolué. En effet, on est maintenant capable de greffer un organe d’un animal sur un humain. Ainsi, une greffe d’un cœur de cochon cochon sur un humain a été réalisée en septembre 2021.</p>
         </section>
 
         <section>
-            <h3>PLUS D'ARTICLES</h3>
-            <article>
-                <a href="regret.html">
-                    <img src="public/img/regret.webp" alt="Le danger de la science">
-                    <h2>Du côté obscur de la science.</h2>
-                    <p>La science a toujours été au centre de notre quotidien. Que nous soyons dans le métro ou dans notre voiture, en train de ...         voir plus</p>
+            <h2>Scientific advances and their origins</h2>
+            <p>Since life first appeared on Earth, the world has seen many scientific advances. 
+                Some of the major advances include :
+            </p>
+            <ul class="article__list">
+                <li class="article__item"><h3 class="article__list--titre">The invention of writing :</h3>Found in archaeological findings in Mesopotamia, clay tablets were 
+                    engraved for the purpose of communication over 5,000 years ago.</li>
+                <li class="article__item"><h3 class="article__list--titre">Photogrphy :</h3> Based on the functioning of the human eye. In the 4th century BC, Aristotle, a Greek 
+                    philosopher, discovered that light entering a dark room through a small hole projected onto the 
+                    opposite wall the inverted image of objects placed in front of the orifice. That's the "Camera 
+                    obscura" and this is what will later give life to photography.</li>
+                <li class="article__item"><h3 class="article__list--titre">Space conquest :</h3> Neil Armstrong's first steps on the moon on 20 July 1969 were as exceptional as 
+                    they were perilous. </li>
+            </ul>
+            <img src="/public/img/espace.webp" alt="un astronaute dans l'espace">
+            <h2>Anecdote :</h2>
+            <p> According to some studies, the first great discovery in human history was the 
+                domestication of the sheep in 9000 BC. This enabled prehistoric man to feed himself, create clothes, 
+                tools, etc.
+            </p>
+            <h2>The path of medicine</h2>
+            <p>More specifically in medicine, improves the quality of life. For example, the first organ transplant 
+                took place in 1954 by surgeon Joseph Murray. This was a first in the history of medicine. Nowadays, 
+                organ transplantation has evolved. Indeed, it is now possible to transplant an organ from an animal 
+                to a human. For example, a transplant of a pig heart to a human was performed in September 2021.
+            </p>
+        </section>
+
+        <section class="more">
+            <h1 class="more__title">MORE ARTICLES</h1>
+            <article class="more__article1">
+                <a href="colisée.html">
+                    <img src="/public/img/regret.webp" alt="The regret of the science">
+                    <h2>On the dark side of science</h2>
+                    <p>Science has always been at the center of our daily lives. Whether we are in the metro or in our car, studying the ... <span class="article__span2">see more</span></p>
                 </a>
             </article>
-            <article>
-                <a href="kendrick.html">
-                    <img src="public/img/musique.webp" alt="N95 de Kendrick Lamar">
-                    <h2>Take off the evil, take off the illusion </h2>
-                    <p>Dans N95, Kendrick Lamar a beaucoup de choses à dire et aborde les différents maux qui menacent la société. A travers ce ...       voir plus</p>
+            <article class="more__article2">
+                <a href="/en/gladiator.html">
+                    <img src="/public/img/musique.webp" alt="Gladiator" class="img__article">
+                    <h2>Ready to fight ?</h2>
+                    <p class="article__p"> Gladiator is a historical fiction film revisiting the fall of the Roman Empire. It is directed by Ridley Scott ...<span class="article__span2">see more</span></p>
                 </a>
             </article>
         </section>
     </main>
-
-    <footer>
-        <p>POUPON Thomas - B2</p>
-        <q>Projet réalisé dans le cadre d'un exercice pédagogique au département <a href="http://mmimontbeliard.com/">MMI de Montbéliard</a></q>
-        <a href="mailto:thomaspoupon39270@gmail.com">Envoyer un mail</a>
-        <ul>
-            <li><a href="https://www.instagram.com/_thomas_ppn_/"><img src="public/icone/instagram.svg" alt="lien Instagram pour me suivre"></a></li>
-            <li><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/"><img src="public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre"></a></li>
-        </ul>
-    </footer>
+    
+        <footer class="footer">
+            <p class="footer__name">POUPON Thomas - B2</p>
+            <q class="footer__quote">Project realised in the framework of a pedagogical exercise in the department <a href="http://mmimontbeliard.com/" class="footer__link">MMI of Montbéliard</a></q>
+            <a href="mailto:thomaspoupon39270@gmail.com" class="footer__mailto"><p>Send a mail</p></a>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="https://www.instagram.com/_thomas_ppn_/" class="footer__link"><img src="/public/icone/instagram.svg" alt="lien Instagram pour me suivre" class="footer__icn"></a></li>
+                <li class="footer__item"><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/" class="footer__link"><img src="/public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre" class="footer__icn"></a></li>
+            </ul>
+        </footer>
 </body>
 </html>
