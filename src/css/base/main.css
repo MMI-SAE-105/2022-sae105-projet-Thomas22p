@@ -165,11 +165,17 @@ a:hover {
 }
 
 /* page autre projets */
-.section__AutresProjets {
+.other {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 5  px;
+}
+
+.other__link {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .quote {
