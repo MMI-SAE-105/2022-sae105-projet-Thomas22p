@@ -5,104 +5,133 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Last Time</title>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="icon" type="image/png" href="/public/icone/logo.svg">
 </head>
 
 <body>
-    <header>
-        <a href="index.html">
-            <img src="public/icone/logo.svg" alt="Logo Last Time">
-        </a>
+    <header class="header">
+        <div class="header__main">
+            <a href="/en/index.html" class="header__icone">
+                <img src="/public/icone/logo.svg" alt="Logo Last Time" class="header__logo">
+            </a>
+    
+            <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
+                <img src="/public/icone/menu.svg" alt="Menu hamburger">
+            </button>
+        </div>
+        
 
-        <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
-            <img src="public/icone/menu.svg" alt="Menu hamburger"></a>
-        </button>
-
-        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
-            <ul>
-                <li><a href="index.html"><img src="public/icone/articles.svg" alt=""> Articles</a>
-                    <ul>
-                      <li><a href="colisée.html">Le Colisée</a></li>
-                      <li><a href="gladiator.html">Gladiator</a></li>
-                      <li><a href="berserk.html">Berserk</a></li>
-                      <li><a href="espoir.html">L'espoir de la science</a></li>
-                      <li><a href="regret.html">Le danger de la science</a></li>
-                      <li><a href="kendrick.html">N95 de Kendrick Lamar</a></li>
+        <nav id="mainNav" x-show="menuIsOpen" class="header__menu">
+            <ul class="menu__list">
+                <li class="menu__article"><a href="/en/index.html" class="menu__link"><img src="/public/icone/articles.svg" alt="articles" class="menu__article--icn"> Articles</a>
+                    <ul class="menu__article--list">
+                      <li class="menu__item"><a href="/en/colisée.html" class="menu__link">The Colosseum</a></li>
+                      <li class="menu__item"><a href="/en/gladiator.html" class="menu__link">Gladiator</a></li>
+                      <li class="menu__item"><a href="/en/berserk.html" class="menu__link">Berserk</a></li>
+                      <li class="menu__item"><a href="/en/espoir.html" class="menu__link">The hope of science</a></li>
+                      <li class="menu__item"><a href="/en/regret.html" class="menu__link">The regret of science</a></li>
+                      <li class="menu__item"><a href="/en/kendrick.html" class="menu__link">N95 by Kendrick Lamar</a></li>
                     </ul>
                 </li>
-                <li><a href="contact.html"><img src="public/icone/contact.svg" alt="contactez-moi">Contact</a></li>
-                <li><a href="autres_projets.html"><img src="public/icone/autres projets.svg" alt="">Autres projets</a></li>
+                <li class="menu__contact"><a href="/en/contact.html" class="menu__link"><img src="/public/icone/contact.svg" alt="contactez-moi" class="menu__article--icn">Contact</a></li>
+                <li class="menu__projets"><a href="/en/autres_projets.html" class="menu__link"><img src="/public/icone/autres_projets.svg" alt="autres projets" class="menu__article--icn">Other projects</a></li>
 
-                <li><a href="a_propos.html">A propos</a></li>
-                <li><a href="glossaire.html">Glossaire</a></li>
+                <li class="menu__propos"><a href="/en/a_propos.html" class="menu__link--propos">About</a></li>
+                <li class="menu__glossaire"><a href="/en/glossaire.html" class="menu__link--glossaire">Glossary</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <img src="public/icone/chevron.svg" alt="retouren arrière">
-        <img src="/public/icone/langue EN.svg" alt="lire en anglais">
 
-        <section>
-            <h1>Une épopée sanglante : Berserk</h1>
-            <img src="public/icone/horloge.svg" alt="Temps de lecture">
-            <p>Temps de lecture : 5 min</p>
-            <img src="public/img/berserk.webp" alt="Berserk">
-            <p>Berserk est un manga seinen de dark fantasy du mangaka Kentaro Miura. Il est inspiré de la période du moyen-âge Européen.</p>
+    <main class="main">
+        <a href="/fr/contact.html" class="main__langue"><img src="/public/icone/langueFR.svg" alt="voir en Français"></a>
+
+        <section class="base">
+            <h1  class="base__titre">A bloody epic: Berserk</h1>
+            <div class="base__temps">
+                <img class="base__horloge" src="/public/icone/horloge.svg" alt="Temps de lecture">
+                <p class="base__minute">Reading time : 5 min </p>
+            </div>
+            <img class="base__img" src="/public/img/berserk.webp" alt="Le Colisée">
+            <p class="base__intro">Berserk is a dark fantasy seinen manga by mangaka Kentaro Miura. It is inspired by the period of the 
+                European Middle Ages.
+            </p>
         </section>
 
         <section>
-            <h2>Les débuts du manga</h2>
-            <p>Les première ébauches du manga sont faites alors que son concepteur, Kentaro Miura, est encore à l’université. En effet, il dessine pour la première fois Guts et d’autres personnages qu’il implantera dans son manga Berserk pour son portfolio. 
-                
-                Dans le premier volume on suit un mercenaire borgne errant dans un monde médiéval. Ce mercenaire se nomme Guts et est marqué par un passé difficile que l’on découvre tout au long du manga. Il porte un bras gauche mécanique et une épée trop longue, épaisse et lourde de sa seule main droite.  
-                Traqué sans relâche par le mal et suivi par d’horribles monstres ainsi que d’hommes puissants, Guts est froid, cruel et dénué d’émotion. Cependant, dans les prochains volumes, nous découvrons une nouvelle facette de Guts lors d’un bond dans le passé.
+            <h2>The beginnings of the manga</h2>
+            <p>Berserk is a dark fantasy seinen manga by mangaka Kentaro Miura inspired by the European Middle 
+                Ages. The first drafts of the manga were made while its creator, Kentaro Miura, was still at university. 
+                Indeed, he drew for the first time Guts and other characters that he will implement in his manga 
+                Berserk for his portfolio. 
+
+                In the first volume we follow a one-eyed mercenary wandering in a medieval world. This mercenary 
+                is called Guts and is marked by a difficult past that we discover throughout the manga. He carries a 
+                mechanical left arm and a sword that is too long, thick and heavy in his right hand alone. 
+                Stalked relentlessly by evil and followed by horrible monsters and powerful men, Guts is cold, cruel 
+                and emotionless. However, in the next few volumes, we discover a new side of Guts in a leap into the 
+                past
             </p>
-            <h2>Le Mal dans un univers obscur</h2>
-            <p>La réflexion sur le Mal et son origine est nettement traité à travers Berserk. Ici, le Mal s’apparente au potentiel destructeur que nous avons tous en nous. Guts réserve ce potentiel à la défense sa propre vie et celle de ses proches. D’autres le mettent au service d’une quête de pouvoir ou d’un assouvissement de pulsions perverses. Sous l’image de l’effroyable Guts, se trouve un homme luttant contre ce mal qui le traque pour s’apprivoiser le seau sanglant qui se trouve dans sa nuque. Sa quête première est de survivre dans ce monde obscur.</p>
-            <img src="public/img/berserk2.webp" alt="planche obscur de Berserk">
-            <p>L’histoire du manga et ses planches vous laisseront glacé, le degré de violence physique, sexuelle et morale y atteint son paroxysme. 
-                D’autre part, l’intrigue et la belle écriture de Kentaro Miura est l’essence du manga, ce qui donne de véritables développements des personnages. 
+            <h2>Evil in a dark universe</h2>
+            <p>The reflection on Evil and its origin is clearly treated through Berserk. Here, evil is the destructive 
+                potential we all have within us. Guts reserves this potential for the defence of his own life and that of 
+                his loved ones. Others use it in the service of a quest for power or to satisfy perverse impulses. 
+                Beneath the image of the dreadful Guts, there is a man fighting against the evil that stalks him in 
+                order to tame the bloody bucket at the back of his neck. His primary quest is to survive in this dark 
+                world.
+            </p>
+            <img src="/public/img/berserk2.webp" alt="planche obscur de Berserk">
+            <p>The story of the manga and its plates will leave you chilled, the degree of physical, sexual and moral 
+                violence reaches its paroxysm. 
+                On the other hand, the plot and the beautiful writing of Kentaro Miura is the essence of the manga, 
+                which gives real developments of the characters. 
                 
-                En effet, l’univers si spécifique du mangaka Miura prend forme grâce à un style saisissant, qui grave dans la mémoire de chaque lecteur ces fresques aux détails macabres, organiques, à la puissance sensorielle qui dépassant le cadre visuel.
+                ndeed, the very specific universe of the mangaka Miura takes shape thanks to a striking style, which 
+                engraves in the memory of each reader these boards with macabre, organic details, with a sensory 
+                power that goes beyond the visual frame.
             </p>
             <h2>Anecdote :</h2>
-            <p>Miura est un grand fan de Star Wars, il a d’ailleurs inclus une poignée de références à la série. L’un des arcs du manga s’appelle The Millenium Falcon Arc, ayant le nom d’un des vaisseaux les plus connu de Star Wars. 
-                On voit par exemple Yoda, et de petits esprits portant des casques de Stromtrooper.
+            <p>Miura is a great fan of Star Wars, and he has also included a handful of references to the 
+                series. One of the arcs of the manga is called The Millenium Falcon Arc, named like one of the most 
+                famous ships of Satr Wars. We see for example Yoda, and small spirits wearing Stromtrooper 
+                helmets.
             </p>
-            <img src="public/img/image 4.webp" alt="image de Yoda dans le manga">
-            <img src="public/img/image 5.webp" alt="esprits portant des casques de Stromtrooper">
+            <img class="article__img img__berserk--ref1" src="/public/img/image_4.webp" alt="image de Yoda dans le manga">
+            <img class="article__img img__berserk--ref2" src="/public/img/image_5.webp" alt="esprits portant des casques de Stromtrooper">
         </section>
-        <a href="extraitLivre.html">Accéder aux planches</a>
+        <a  class="article__link link__livre" href="extraitLivre.html">Access to the boards</a>
         
-        <section>
-            <h3>PLUS D'ARTICLES</h3>
-            <article>
+        <section class="more">
+            <h1 class="more__title">MORE ARTICLES</h1>
+            <article class="more__article1">
                 <a href="colisée.html">
-                    <img src="public/img/colisée.webp" alt="Le Colisée">
-                    <h2>Le Colisé, un lieu culte et son histoire.</h2>
-                    <p>Le Colisée est le plus grand amphithéâtre de l’Antiquité. Situé dans le centre de Rome, il était à l’origine de grandes activités ...          voir plus</p>
+                    <img src="/public/img/colisée.webp" alt="Le Colisée">
+                    <h2>The Colosseum, a cult site and its history</h2>
+                    <p>Located in the center of Rome, it was the site of major events in the ...<span class="article__span2">see more</span></p>
                 </a>
             </article>
-            <article>
-                <a href="gladiator.html">
-                    <img src="public/img/gladiator.webp" alt="Gladiator">
-                    <h2>Prêt à vous battre ?</h2>
-                    <p>Gladiator est un film de fiction historique revisitant la chute de l’Empire romain. Il est réalisé par le cinéaste Ridley Scott ...    voir plus</p>
+            <article class="more__article2">
+                <a href="/en/gladiator.html">
+                    <img src="/public/img/gladiator.webp" alt="Gladiator" class="img__article">
+                    <h2>Ready to fight ?</h2>
+                    <p class="article__p"> Gladiator is a historical fiction film revisiting the fall of the Roman Empire. It is directed by Ridley Scott ...<span class="article__span2">voir plus</span></p>
                 </a>
             </article>
         </section>
     </main>
-
-    <footer>
-        <p>POUPON Thomas - B2</p>
-        <q>Projet réalisé dans le cadre d'un exercice pédagogique au département <a href="http://mmimontbeliard.com/">MMI de Montbéliard</a></q>
-        <a href="mailto:thomaspoupon39270@gmail.com">Envoyer un mail</a>
-        <ul>
-            <li><a href="https://www.instagram.com/_thomas_ppn_/"><img src="public/icone/instagram.svg" alt="lien Instagram pour me suivre"></a></li>
-            <li><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/"><img src="public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre"></a></li>
-        </ul>
-    </footer>
+    
+        <footer class="footer">
+            <p class="footer__name">POUPON Thomas - B2</p>
+            <q class="footer__quote">Project realised in the framework of a pedagogical exercise in the department <a href="http://mmimontbeliard.com/" class="footer__link">MMI of Montbéliard</a></q>
+            <a href="mailto:thomaspoupon39270@gmail.com" class="footer__mailto"><p>Send a mail</p></a>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="https://www.instagram.com/_thomas_ppn_/" class="footer__link"><img src="/public/icone/instagram.svg" alt="lien Instagram pour me suivre" class="footer__icn"></a></li>
+                <li class="footer__item"><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/" class="footer__link"><img src="/public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre" class="footer__icn"></a></li>
+            </ul>
+        </footer>
 </body>
 </html>
