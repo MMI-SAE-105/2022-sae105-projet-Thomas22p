@@ -5,96 +5,129 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Last Time</title>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="icon" type="image/png" href="/public/icone/logo.svg">
 </head>
 
 <body>
-    <header>
-        <a href="index.html">
-            <img src="public/icone/logo.svg" alt="Logo Last Time">
-        </a>
+    <header class="header">
+        <div class="header__main">
+            <a href="/en/index.html" class="header__icone">
+                <img src="/public/icone/logo.svg" alt="Logo Last Time" class="header__logo">
+            </a>
+    
+            <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
+                <img src="/public/icone/menu.svg" alt="Menu hamburger">
+            </button>
+        </div>
+        
 
-        <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
-            <img src="public/icone/menu.svg" alt="Menu hamburger">
-        </button>
-
-        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
-            <ul>
-                <li><a href="index.html"><img src="public/icone/articles.svg" alt=""> Articles</a>
-                    <ul>
-                      <li><a href="colisée.html">Le Colisée</a></li>
-                      <li><a href="gladiator.html">Gladiator</a></li>
-                      <li><a href="berserk.html">Berserk</a></li>
-                      <li><a href="espoir.html">L'espoir de la science</a></li>
-                      <li><a href="regret.html">Le danger de la science</a></li>
-                      <li><a href="kendrick.html">N95 de Kendrick Lamar</a></li>
+        <nav id="mainNav" x-show="menuIsOpen" class="header__menu">
+            <ul class="menu__list">
+                <li class="menu__article"><a href="/en/index.html" class="menu__link"><img src="/public/icone/articles.svg" alt="articles" class="menu__article--icn"> Articles</a>
+                    <ul class="menu__article--list">
+                      <li class="menu__item"><a href="/en/colisée.html" class="menu__link">The Colosseum</a></li>
+                      <li class="menu__item"><a href="/en/gladiator.html" class="menu__link">Gladiator</a></li>
+                      <li class="menu__item"><a href="/en/berserk.html" class="menu__link">Berserk</a></li>
+                      <li class="menu__item"><a href="/en/espoir.html" class="menu__link">The hope of science</a></li>
+                      <li class="menu__item"><a href="/en/regret.html" class="menu__link">The regret of science</a></li>
+                      <li class="menu__item"><a href="/en/kendrick.html" class="menu__link">N95 by Kendrick Lamar</a></li>
                     </ul>
                 </li>
-                <li><a href="contact.html"><img src="public/icone/contact.svg" alt="contactez-moi">Contact</a></li>
-                <li><a href="autres_projets.html"><img src="public/icone/autres_projets.svg" alt="">Autres projets</a></li>
+                <li class="menu__contact"><a href="/en/contact.html" class="menu__link"><img src="/public/icone/contact.svg" alt="contactez-moi" class="menu__article--icn">Contact</a></li>
+                <li class="menu__projets"><a href="/en/autres_projets.html" class="menu__link"><img src="/public/icone/autres_projets.svg" alt="autres projets" class="menu__article--icn">Other projects</a></li>
 
-                <li><a href="a_propos.html">A propos</a></li>
-                <li><a href="glossaire.html">Glossaire</a></li>
+                <li class="menu__propos"><a href="/en/a_propos.html" class="menu__link--propos">About</a></li>
+                <li class="menu__glossaire"><a href="/en/glossaire.html" class="menu__link--glossaire">Glossary</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <a href="/fr/colisée.html"><img src="/public/icone/langueEN.svg" alt="lire en anglais"></a>
+
+    <main class="main">
+        <a href="/fr/contact.html" class="main__langue"><img src="/public/icone/langueFR.svg" alt="voir en Français"></a>
+
+        <section class="base">
+            <h1  class="base__titre">The Colosseum, a cult site and its history</h1>
+            <div class="base__temps">
+                <img class="base__horloge" src="/public/icone/horloge.svg" alt="Temps de lecture">
+                <p class="base__minute"> Reading time : 7 min</p>
+            </div>
+            <img class="base__img" src="/public/img/colisée.webp" alt="Le Colisée">
+            <p class="base__intro"> he Colosseum is the largest amphitheater in antiquity. Located in the center of Rome, it was 
+                the origin of great activities known and loved by the Roman people. Nowadays, it has 
+                become a major tourist attraction.
+            </p>
+        </section>
+
+        <span class="article__btn">article</span>
+        <a class="frise__btn" href="/en/frise.html">frise</a>
 
         <section>
-            <h1>Le Colisée, un lieu culte et son histoire</h1>
-            <img src="public/icone/horloge.svg" alt="Temps de lecture">
-            <p>Temps de lecture : 7 min</p>
-            <img src="/public/img/colisée.webp" alt="Le Colisée">
-            <p>Le Colisée est le plus grand amphithéâtre de l’Antiquité. Situé dans le centre de Rome, il était à l’origine de grandes activités connues et aimées du peuple Romain. De nos jours, il est devenu une attraction touristique majeure.</p>
+            <h2>What is the purpose of the Colosseum?</h2>
+            <p>The Colosseum was built in the year 80 to entertain the Roman citizens by organizing different events 
+                such as Gladiator fights, open hunts and re-enactments of naval battles.
+                It was also a powerful instrument of control over the people and a showcase for Rome's supremacy 
+                over the world; at that time the Roman Empire stretched from Britain to Egypt. 
+                map.
+            </p>
+            <img src="/public/img/map.webp" alt="carte de l'Empire Romain">
+            <h2>Gladiators</h2>
+            <p>The Muneras are fights to the death between gladiators with the aim of providing entertainment for 
+                the spectators. Their fights are more about spectacle than about killing the opponent.Most gladiators are criminals or prisoners of war sentenced to death. But the government forces 
+                them to fight to the death to entertain the government and the people. Ridley Scott's film Gladiator 
+                illustrates this very well.
+            </p>
+            <h2>The incredible history of the Colosseum</h2>
+            <p>The construction of the 188m long, 155m wide and 48m high building was as rough and violent as 
+                the events that took place thereafter. The construction of the Colosseum was seen as a feat. Indeed, 
+                the Romans used for the first time materials still in use today, such as travertine limestone and 
+                concrete. Using these new materials, they had no proof that the building would stand, but under 
+                pressure from the Emperor Vespasian, the Romans had to carry out the orders.
+                Known as the Flavian Amphitheatre, the name of the arena was inspired by a colossal statue of Nero 
+                that once stood nearby, called The Colossus.
+            </p>
+            <img src="/public/img/néron.webp" alt="Le Colosse de Néron">
+            <p class="article__legende">this image is a reproduction</p>
+            <p>It was partly thanks to Nero, the so-called "tyrant of 
+                Rome", that the Colosseum could be built. Nero was the last emperor of the Julio-Claudian dynasty. 
+                He was suspected of having deliberately set fire to Rome in order to rebuild it in his own image. 
+                Indeed, after the fire, he built a large palatial complex, the Domus Aurea. He also laid out the 
+                grounds to include an artificial lake, pavilions, gardens and porticoes, and the gigantic bronze 
+                colossus of Nero. Later, the famous Domus Aurea was demolished to build the greatest monument of 
+                the Roman Empire, the Colosseum.
+            </p>
+            <a class="article__link link__visit" href="https://www.colosseum-rome-tickets.com/fr/colosseum/">Visit the Colosseum</a>
         </section>
-        article
-        <a href="frise.html">frise</a>
-        <section>
-            <h2>A quoi sert le Colisée ?</h2>
-            <p>Le Colisée a été construit en 80 pour divertir les citoyens romains en organisant différents évènements comme des combats de Gladiateurs, des chasses ouvertes ou encore des reconstitutions de batailles navales.
-                C’était également un puissant instrument de contrôle du peuple et une vitrine qui montrait la suprématie de Rome sur le monde ; à cette époque, l’Empire Romain s’étendait de la Grande-Bretagne à l’Égypte. 
-            </p>
-            <img src="public/img/map.webp" alt="carte de l'Empire Romain">
-            <h2>Les combats de gladiateurs</h2>
-            <p>Les Muneras sont des combats à morts entre gladiateurs dans le but d’offrir du divertissement aux spectateurs. Leurs affrontements relèvent plus du spectacle que de la volonté de tuer l'adversaire.
-                La plupart des gladiateurs sont d es criminels ou des prisonniers de guerre condamnés à mort. Mais le gouvernement les oblige à se battre à mort pour le divertir, lui et le peuple. Le film Gladiator, de Ridley Scott, l’illustre très bien.
-            </p>
-            <h2>L’incroyable histoire du Colisée</h2>
-            <p>La construction de ce bâtiment de 188 m de long, 155 m de largeur et 48 m de haut fut aussi rude est violente que les évènements qui s’y déroulèrent par la suite. La construction du Colisée a été perçue comme une prouesse. En effet, les romains utilisaient pour la première fois des matériaux toujours utilisés de nos jours, comme l’utilisation de calcaire travertin et de béton. En utilisant ses nouveaux matériaux, ils n’avaient aucune preuve que l’édifice tiendrait, mais sous la pression de l’empereur Vespasien, les romains devaient exécuter les ordres.
-                Connu sous le nom d'amphithéâtre Flavien, le nom de l'arène s'inspire d'une statue colossale de Néron qui se trouvait autrefois à proximité, baptisée Le Colosse.
-            </p>
-            <img src="public/img/néron.webp" alt="Le Colsse de Néron">
-            <p>cette image est une reproduction</p>
-            <p>C’est en partie grâce à Néron, celui que l’on surnommait « le tyran de Rome », que le Colisée a pu être construit. Néron est le cinquième et dernier empereur de la dynastie Julio-claudienne. On le soupçonnait d’avoir mis volontairement le feu à Rome pour le reconstruire à son image. En effet, après cet incendie, il a construit un grand complexe palatial, la Domus Aurea. Il a également aménagé le terrain pour y installer un lac artificiel, des pavillons, des jardins et des portiques et le gigantesque colosse de bronze de Néron. Plus tard, la célèbre Domus Aurea fut détruite pour construire le plus grand monument de l’Empire Romain, le Colisée.</p>
-            <a href="https://www.colosseum-rome-tickets.com/fr/colosseum/">Visiter le Colisée</a>
-        </section>
-        <section>
-            <h3>PLUS D'ARTICLES</h3>
-            <article>
-                <a href="gladiator.html">
-                    <img src="public/img/gladiator.webp" alt="Gladiator">
-                    <h2>Prêt à vous battre ?</h2>
-                    <p>Gladiator est un film de fiction historique revisitant la chute de l’Empire romain. Il est réalisé par le cinéaste Ridley Scott ...    voir plus</p>
+        <section class="more">
+            <h1 class="more__title">MORE ARTICLES</h1>
+            <article class="more__article1">
+                <a href="/en/gladiator.html">
+                    <img src="/public/img/gladiator.webp" alt="Gladiator" class="img__article">
+                    <h2>Ready to fight ?</h2>
+                    <p class="article__p"> Gladiator is a historical fiction film revisiting the fall of the Roman Empire. It is directed by Ridley Scott ...<span class="article__span2">voir plus</span></p>
                 </a>
-                <a href="berserk.html">
-                    <img src="public/img/berserk.webp" alt="Berserk">
-                    <h2>Une épopée sanglante : Berserk.</h2>
-                    <p>Berserk est un manga seinen de dark fantasy du mangaka Kentaro Miura. Il est inspiré de la période du moyen-âge Européen ...        voir plus</p>
+            </article>
+            <article class="more__article2">
+                <a href="/en/berserk.html">
+                    <img src="/public/img/berserk.webp" alt="Berserk" class="img__article">
+                    <h2>A bloody epic story : Berserk</h2>
+                    <p class="article__p">Berserk is a dark fantasy seinen manga by mangaka Kentaro Miura. It is inspired by the period of the European Middle Ages ...<span class="article__span3">voir plus</span></p>
                 </a>
             </article>
         </section>
     </main>
 
-    <footer>
-        <p>POUPON Thomas - B2</p>
-        <q>Projet réalisé dans le cadre d'un exercice pédagogique au département <a href="http://mmimontbeliard.com/">MMI de Montbéliard</a></q>
-        <a href="mailto:thomaspoupon39270@gmail.com">Envoyer un mail</a>
-        <ul>
-            <li><a href="https://www.instagram.com/_thomas_ppn_/"><img src="public/icone/instagram.svg" alt="lien Instagram pour me suivre"></a></li>
-            <li><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/"><img src="public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre"></a></li>
+    <footer class="footer">
+        <p class="footer__name">POUPON Thomas - B2</p>
+        <q class="footer__quote">Project realised in the framework of a pedagogical exercise in the department <a href="http://mmimontbeliard.com/" class="footer__link">MMI of Montbéliard</a></q>
+        <a href="mailto:thomaspoupon39270@gmail.com" class="footer__mailto"><p>Send a mail</p></a>
+        <ul class="footer__list">
+            <li class="footer__item"><a href="https://www.instagram.com/_thomas_ppn_/" class="footer__link"><img src="/public/icone/instagram.svg" alt="lien Instagram pour me suivre" class="footer__icn"></a></li>
+            <li class="footer__item"><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/" class="footer__link"><img src="/public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre" class="footer__icn"></a></li>
         </ul>
     </footer>
 </body>
