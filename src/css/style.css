@@ -37,6 +37,9 @@
 /* Home */
 @import url(components/home.css);
 
+/* Chois de la langue */
+@import url(components/landing.css);
+
 
 /* test */
 @media only screen and (min-width : 920px) {

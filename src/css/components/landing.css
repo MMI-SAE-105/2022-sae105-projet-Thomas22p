@@ -1,0 +1,51 @@
+.landing__background {
+  height: 100%;
+  width: 100%;
+  filter: blur(10px)
+}
+
+.landing__pop-up {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    height: 80%;
+    max-height: 400px;
+    z-index: 2;
+}
+
+.landing__title {
+    font-size: var(--m2);
+    font-weight: bold;
+    display: flex;
+    justify-content: start;
+    padding-left: 20px;
+}
+
+.landing__text {
+    padding: 0 20px;
+}
+
+.landing__list {
+    list-style: none;
+    padding: 10px 0 0 0;
+    margin: 0;
+}
+
+.landing__item {
+    text-align: center; 
+    padding: 10px 0;
+    font-family: var(--linear);
+    font-size: var(--m2);
+    font-weight: bold;
+}
+
+.landing__link {
+    text-decoration: none;
+    color: var(--bleu-clair);
+}
