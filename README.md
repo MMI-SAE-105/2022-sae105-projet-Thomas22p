@@ -1,7 +1,7 @@
 - NOM : thomas
 - PRÉNOM : poupon
-- URL du site :
-- URL FIGMA :
+- URL du site : https://last-time.thomaspoupon.fr
+- URL FIGMA : https://www.figma.com/file/shoqsdDIaX3suMK1bMfxmZ/Maquettes-projet-individuel-%E2%80%94-Thomas-Poupon-(v2)?node-id=801%3A781&t=o2aVaDqCjqnCVbcj-1
 
 # Structure de départ pour le projet individuel.
 
