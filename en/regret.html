@@ -5,97 +5,120 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Last Time</title>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="icon" type="image/png" href="/public/icone/logo.svg">
 </head>
 
 <body>
-    <header>
-        <a href="index.html">
-            <img src="public/icone/logo.svg" alt="Logo Last Time">
-        </a>
+    <header class="header">
+        <div class="header__main">
+            <a href="/en/index.html" class="header__icone">
+                <img src="/public/icone/logo.svg" alt="Logo Last Time" class="header__logo">
+            </a>
+    
+            <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
+                <img src="/public/icone/menu.svg" alt="Menu hamburger">
+            </button>
+        </div>
+        
 
-        <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
-            <img src="public/icone/menu.svg" alt="Menu hamburger"></a>
-        </button>
-
-        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
-            <ul>
-                <li><a href="index.html"><img src="public/icone/articles.svg" alt=""> Articles</a>
-                    <ul>
-                      <li><a href="colisée.html">Le Colisée</a></li>
-                      <li><a href="gladiator.html">Gladiator</a></li>
-                      <li><a href="berserk.html">Berserk</a></li>
-                      <li><a href="espoir.html">L'espoir de la science</a></li>
-                      <li><a href="regret.html">Le danger de la science</a></li>
-                      <li><a href="kendrick.html">N95 de Kendrick Lamar</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact.html"><img src="public/icone/contact.svg" alt="contactez-moi">Contact</a></li>
-                <li><a href="autres_projets.html"><img src="public/icone/autres projets.svg" alt="">Autres projets</a></li>
-
-                <li><a href="a_propos.html">A propos</a></li>
-                <li><a href="glossaire.html">Glossaire</a></li>
+        <nav id="mainNav" x-show="menuIsOpen" class="header__menu">
+            <ul class="menu__list--top">
+                <li class="menu__list list__article"><a href="/en/index.html" class="menu__link"><img src="/public/icone/articles.svg" alt="articles" class="menu__article--icn">Articles</a></li>
+                <ul class="menu__list--article">
+                    <li class="menu__item"><a href="/en/colisée.html" class="menu__link">The Colosseum</a></li>
+                    <li class="menu__item"><a href="/en/gladiator.html" class="menu__link">Gladiator</a></li>
+                    <li class="menu__item"><a href="/en/berserk.html" class="menu__link">Berserk</a></li>
+                    <li class="menu__item"><a href="/en/espoir.html" class="menu__link">The hope of science</a></li>
+                    <li class="menu__item"><a href="/en/regret.html" class="menu__link">The regret of science</a></li>
+                    <li class="menu__item"><a href="/en/kendrick.html" class="menu__link">N95 by Kendrick Lamar</a></li>
+                </ul>
+                <li class="menu__list list__contact"><a href="/en/contact.html" class="menu__link"><img src="/public/icone/contact.svg" alt="contactez-moi" class="menu__article--icn">Contact</a></li>
+                <li class="menu__list list__projets"><a href="/en/autres_projets.html" class="menu__link"><img src="/public/icone/autres_projets.svg" alt="autres projets" class="menu__article--icn">Other projects</a></li>
+            </ul>
+            <ul class="menu__list--bottom">
+                <li class="menu__item"><a href="/en/a_propos.html" class="menu__link--propos">About</a></li>
+                <li class="menu__item"><a href="/en/glossaire.html" class="menu__link--glossaire">Glossary</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <img src="public/icone/chevron.svg" alt="retouren arrière">
-        <img src="/public/icone/langue EN.svg" alt="lire en anglais">
 
-        <section>
-            <h1>Du côté obscur de la science</h1>
-            <img src="public/icone/horloge.svg" alt="Temps de lecture">
-            <p>Temps de lecture : 4 min</p>
-            <img src="public/img/regret.webp" alt="regret">
-            <p>La science a toujours été au centre de notre quotidien. Que nous soyons dans le métro ou dans notre voiture, en train de manger ou de dormir. La science, à différents niveaux, a permis certaines nouveautés que l'on croyait autrefois impossibles. Chaque progrès nécessite un saut dans le nouvel inconnu.
-                Malgré le progrès scientifique et ses bienfaits, et malgré le confort qu'elle nous apporte, une facette souvent cachée de la science pourrait devenir un danger.
+    <main class="main">
+        <a href="/fr/regret.html" class="main__langue"><img src="/public/icone/langueFR.svg" alt="voir en Français"></a>
+
+        <section class="base">
+            <h1  class="base__titre">From the dark side of science</h1>
+            <div class="base__temps">
+                <img class="base__horloge" src="/public/icone/horloge.svg" alt="Temps de lecture">
+                <p class="base__minute"> Reading time : 3 min</p>
+            </div>
+            <img class="base__img" src="/public/img/regret.webp" alt="Le regret de la science">
+            <p class="base__intro">Science has always been at the centre of our daily lives. Whether we are in the metro or in 
+                our car, eating or sleeping. Science, at various levels, has made possible certain innovations 
+                that were once thought impossible. Each advance requires a leap into the new unknown.
+                Despite scientific progress and its benefits, and despite the comfort it brings us, an often 
+                hidden facet of science could become a danger.
             </p>
-
         </section>
 
-        <section>
-            <h2>N’oublions pas le danger</h2>
-            <p>Dans le Discours de la méthode, Descartes, grand philosophe français, explique que lorsque la technique acquise par les hommes devient technologie, elle permet de</p>
-            <q>nous rendre comme maîtres et possesseurs de la Nature</q>
-            <p>Selon lui, l'homme a la volonté de puissance et refuse de se soumettre aux lois de la nature. 
-                En effet, le progrès technique, comme celui de la science, permet de combler des lacunes mais donne aussi accès au danger qu’est la science.
-                L'exemple le plus simple sont les technologies nucléaires qui, quand elles ont été inventées en 1986, permettaient de faciliter les conditions de vies des hommes. Cependant, plusieurs catastrophes ont eu lieu à la suite de sa création, comme la création de médicaments radioactifs qui procurais le cancer aux malades et les centrales nucléaires. Une des catastrophes la plus connu en lien avec cette énergie nucléaire est l’accident de Tchernobyl. 
+        <section class="article">
+            <h2 class="article__q">Don’t forget the danger</h2>
+            <p>In the Discourse on Method, Descartes, the great French philosopher, explains that when the 
+                technique acquired by humans becomes technology, it allows us to</p>
+            <p class="article__q">"make ourselves as masters and possessors of Nature"</p>
+            <p>According to him, man has the will to power and refuses to submit to the laws of nature. 
+                Indeed, technical progress, like that of science, makes it possible to fill gaps but also gives access to 
+                the danger that is science.
+                The simplest example is nuclear technology, which, when it was invented in 1986, made it possible to 
+                facilitate the living conditions of humans. However, several disasters have occurred as a result of its 
+                creation, such as the creation of radioactive drugs that gave cancer to patients and nuclear power 
+                plants. One of the most famous disasters related to nuclear energy is the Chernobyl accident. 
             </p>
-            <h2>La catastrophe nucléaire de Tchernobyl</h2>
-            <img src="public/img/chernobyl.webp" alt="carte de tchernobyl">
-            <p>Dans la nuit du 25 au 26 avril 1986, une montée en puissance incontrôlée d'une unité de la centrale de Tchernobyl fait exploser un réacteur et a entrainé la plus grande catastrophe nucléaire civile de l’humanité. En effet, cela libère une grande quantité de radiations qui ont dépassé celles de 400 bombes. L'explosion a provoqué une grave pollution de l'environnement et tué des milliers de personnes. Les éléments radioactifs éradiquent toute la région en quelques heures et se répandent rapidement dans toute l’Europe en laissant des traces dans la nature. Ils prendront plusieurs milliers d’années pour perdre leur radioactivité.</p>
-            <h2>Fait en chiffre :</h2>
-            <p>Les éléments radioactifs les plus dangereux devraient atteindre leurs demi-vies en 900 ans, ce qui prendrait théoriquement 48 000 ans pour épuiser leur rayonnement restant.</p>
+            <h2 class="article__q">The Chernobyl nuclear disaster</h2>
+            <img src="/public/img/chernobyl.webp" alt="carte de tchernobyl">
+            <p>On the night of 25-26 April 1986, an uncontrolled power surge in a unit of the Chernobyl power plant 
+                caused a reactor to explode, resulting in the largest civil nuclear disaster in human history. It released
+                a large amount of radiation that exceeded that of 400 bombs. The explosion caused severe 
+                environmental pollution and killed thousands of people. The radioactive elements eradicated the 
+                entire region within a few hours and spread rapidly throughout Europe, leaving traces in nature. They 
+                will take several thousand years to lose their radioactivity.
+                </p>
+            <h2 class="article__q">Fact in number :</h2>
+            <p>The most dangerous radioactive elements are expected to reach their half-lives in 
+                900 years, which would theoretically take 48,000 years to exhaust their remaining radiation.</p>
         </section>
 
-        <section>
-            <h3>PLUS D'ARTICLES</h3>
-            <article>
-                <a href="espoir.html">
-                    <img src="public/img/espoir.webp" alt="L'espoir de la science">
-                    <h2>De découverte en découverte : les avantages de la science.</h2>
-                    <p>La science a toujours été au centre de notre quotidien. Le monde d’aujourd’hui ...     voir plus</p>
+        <section class="more">
+            <h1 class="more__title">MORE ARTICLES</h1>
+            <article class="more__article1">
+                <a href="/en/espoir.html">
+                    <img src="/public/img/espoir.webp" alt="The regret of the science">
+                    <h2>From discovery to discovery: the benefits of science</h2>
+                    <p>Science has always been at the centre of our daily lives. Today's world is one of ...<span class="article__span2">see more</span></p>
                 </a>
             </article>
-            <article>
-                <a href="kendrick.html">
-                    <img src="public/img/musique.webp" alt="N95 de Kendrick Lamar">
-                    <h2>Take off the evil, take off the illusion </h2>
-                    <p>Dans N95, Kendrick Lamar a beaucoup de choses à dire et aborde les différents maux qui menacent la société. A travers ce ...       voir plus</p>
+            <article class="more__article2">
+                <a href="/en/kendrick.html">
+                    <img src="/public/img/musique.webp" alt="Gladiator" class="img__article">
+                    <h2>Take off the evil, take off the illusion</h2>
+                    <p class="article__p">In N95, Kendrick Lamar has a lot to say and addresses the various ills that threaten society. 
+                        Through this ...<span class="article__span2">see more</span></p>
                 </a>
             </article>
         </section>
     </main>
 
-    <footer>
-        <p>POUPON Thomas - B2</p>
-        <q>Projet réalisé dans le cadre d'un exercice pédagogique au département <a href="http://mmimontbeliard.com/">MMI de Montbéliard</a></q>
-        <a href="mailto:thomaspoupon39270@gmail.com">Envoyer un mail</a>
-        <ul>
-            <li><a href="https://www.instagram.com/_thomas_ppn_/"><img src="public/icone/instagram.svg" alt="lien Instagram pour me suivre"></a></li>
-            <li><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/"><img src="public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre"></a></li>
+    <footer class="footer">
+        <p class="footer__name">POUPON Thomas - B2</p>
+        <q class="footer__quote">Project realised in the framework of a pedagogical exercise in the department <a href="http://mmimontbeliard.com/" class="footer__link">MMI of Montbéliard</a></q>
+        <a href="mailto:thomaspoupon39270@gmail.com" class="footer__mailto"><p>Send a mail</p></a>
+        <ul class="footer__list">
+            <li class="footer__item"><a href="https://www.instagram.com/_thomas_ppn_/" class="footer__link"><img src="/public/icone/instagram.svg" alt="lien Instagram pour me suivre" class="footer__icn"></a></li>
+            <li class="footer__item"><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/" class="footer__link"><img src="/public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre" class="footer__icn"></a></li>
         </ul>
     </footer>
 </body>
