@@ -5,6 +5,7 @@
     width: 100%;
 	max-width: 284px;
 	height: 100%;
+    z-index: 2;
 }
 
 #mainNav {
@@ -25,6 +26,25 @@
 
 @keyframes slide {
     100% { right: 0; }
+}
+
+.menu__close {
+    position: absolute;
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    top: 30px;
+    right: 25px;
+    z-index: 3;
+}
+
+.menu__close--img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 5px;
+    right: 5px;
 }
 
 .menu__list .menu__link{

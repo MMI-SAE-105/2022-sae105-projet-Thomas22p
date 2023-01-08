@@ -75,30 +75,6 @@
     }
 }
 
-
-@media (min-width: 712px) {
-    @keyframes slide {
-        0% {
-            transform: translateX(calc(30vw - 20px));
-        }
-        20% {
-            transform: translateX(calc(-20vw - 20px));
-        }
-        40% {
-            transform: translateX(calc(-70vw - 10px));
-        }
-        60% {
-            transform: translateX(calc(-120vw - 0px));
-        }
-        80% {
-            transform: translateX(calc(-160vw - 120px));
-        }
-        100% {
-            transform: translateX(calc(30vw - 20px));
-        }
-    }
-}
-
 .home__title {
     font-size: var(--m2);
     font-weight: bold;
