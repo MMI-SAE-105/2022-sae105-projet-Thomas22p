@@ -5,203 +5,202 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Last Time</title>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="icon" type="image/png" href="/public/icone/logo.svg">
 </head>
 
 <body>
-    <header>
-        <a href="index.html">
-            <img src="public/icone/logo.svg" alt="Logo Last Time">
-        </a>
+    <header class="header">
+        <div class="header__main">
+            <a href="/en/index.html" class="header__icone">
+                <img src="/public/icone/logo.svg" alt="Logo Last Time" class="header__logo">
+            </a>
+    
+            <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
+                <img src="/public/icone/menu.svg" alt="Menu hamburger">
+            </button>
+        </div>
+        
 
-        <button  aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen" class="header__menuBtn">
-            <img src="public/icone/menu.svg" alt="Menu hamburger"></a>
-        </button>
-
-        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
-            <ul>
-                <li><a href="index.html"><img src="public/icone/articles.svg" alt=""> Articles</a>
-                    <ul>
-                      <li><a href="colisée.html">Le Colisée</a></li>
-                      <li><a href="gladiator.html">Gladiator</a></li>
-                      <li><a href="berserk.html">Berserk</a></li>
-                      <li><a href="espoir.html">L'espoir de la science</a></li>
-                      <li><a href="regret.html">Le danger de la science</a></li>
-                      <li><a href="kendrick.html">N95 de Kendrick Lamar</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact.html"><img src="public/icone/contact.svg" alt="contactez-moi">Contact</a></li>
-                <li><a href="autres_projets.html"><img src="public/icone/autres projets.svg" alt="">Autres projets</a></li>
-
-                <li><a href="a_propos.html">A propos</a></li>
-                <li><a href="glossaire.html">Glossaire</a></li>
+        <nav id="mainNav" x-show="menuIsOpen" class="header__menu">
+            <ul class="menu__list--top">
+                <li class="menu__list list__article"><a href="en/index.html" class="menu__link"><img src="/public/icone/articles.svg" alt="articles" class="menu__article--icn">Articles</a></li>
+                <ul class="menu__list--article">
+                    <li class="menu__item"><a href="/en/colisée.html" class="menu__link">The Colosseum</a></li>
+                    <li class="menu__item"><a href="/en/gladiator.html" class="menu__link">Gladiator</a></li>
+                    <li class="menu__item"><a href="/en/berserk.html" class="menu__link">Berserk</a></li>
+                    <li class="menu__item"><a href="/en/espoir.html" class="menu__link">The hope of science</a></li>
+                    <li class="menu__item"><a href="/en/regret.html" class="menu__link">The regret of science</a></li>
+                    <li class="menu__item"><a href="/en/kendrick.html" class="menu__link">N95 by Kendrick Lamar</a></li>
+                </ul>
+                <li class="menu__list list__contact"><a href="/en/contact.html" class="menu__link"><img src="/public/icone/contact.svg" alt="contactez-moi" class="menu__article--icn">Contact</a></li>
+                <li class="menu__list list__projets"><a href="/en/autres_projets.html" class="menu__link"><img src="/public/icone/autres_projets.svg" alt="autres projets" class="menu__article--icn">Other projects</a></li>
+            </ul>
+            <ul class="menu__list--bottom">
+                <li class="menu__item"><a href="/en/a_propos.html" class="menu__link--propos">About</a></li>
+                <li class="menu__item"><a href="/en/glossaire.html" class="menu__link--glossaire">Glossary</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <img src="public/icone/chevron.svg" alt="retour en arrière">
-        <img src="/public/icone/langue EN.svg" alt="lire en anglais">
 
-        <h1>Ridley Scott</h1>
+    <main class="main">
+        <a href="/fr/ridleyScott.html" class="main__langue"><img src="/public/icone/langueFR.svg" alt="voir en Français"></a>
+
         <section>
-            <img src="public/img/ridley.webp" alt="Le réalisateur Ridley Scott">
-            <p>D’abord passionné par le dessin, il effectue des études d’art et design au West Hartlepool College of Art, dans le nord de l’Angleterre. 
-                Pendant ses études, il se passionne pour la réalisation et le cinéma. Il sort son premier court-métrage Boy and Bicycle en 1965 en étant étudiant. Son frère Tony Scott, un réalisateur, scénariste et acteur, joue son premier rôle dans ce court-métrage 
-                
-                Dans les années 1970, il travaille pour la publicité britannique où il réalise des films publicitaires. Il continuera tout au long de sa carrière à réaliser des films publicitaires, il est d’ailleurs devenu une référence dans ce domaine. 
-                
-                En dehors de la publicité, il réalise trois films suivants ; Alien, le huitième passager, Blade Runner et Legend. Ces films ont premis à Ridley Scott de se faire connaitre par le grand public dans les années 1970.
+            <h1>Ridley Scott</h1>
+            <img src="/public/img/ridley.webp" alt="Le réalisateur Ridley Scott">
+            <p>Ridley Scott began his career as a draughtsman and studied art and design at West Hartlepool 
+                College of Art in the north of England. 
+                During his studies, he developed a passion for filmmaking. He made his first short film Boy and 
+                Bicycle in 1965 as a student. His brother Tony Scott, a director, writer and actor, played his first role 
+                in this short film.
             </p>
+            <p>In the 1970s, he worked for the British advertising industry, making commercials. He continued to 
+                make advertising films throughout his career and became a leading light in this field. 
+                Outside of advertising, he directed three subsequent films; Alien, the Eighth Passenger, Blade Runner 
+                and Legend. These films brought Ridley Scott to the attention of the public in the 1970s. </p>
         </section>
 
-        <section>
-            <h2>Films cultes</h2>
-            <h2>Sa filmographie</h2>
-            <p>plus récent</p>
-            <img src="public/icone/fleche bas.svg" alt="fleche du bas">
+        <section class="film">
+            <h2 class="film__title"> Cult films</h2>
+            <h3 class="film__subtitle">His filmography</h3>
+            <p class="film__text">Most recent</p>
+            <img src="/public/icone/fleche_bas.svg" alt="fleche du bas" class="film__arrow">
 
-            <article>
-                <a href="https://fr.wikipedia.org/wiki/American_Gangster">
-                    <img src="public/img/american gangster.webp" alt="american gangster">
-                    <h3>American Gangster</h3>
-                    <p>2007</p>
-                </a>
-            </article>
-
-            <article>
-                <a href="https://fr.wikipedia.org/wiki/Kingdom_of_Heaven">
-                    <img src="public/img/KofH.webp" alt="King of Heaven">
-                    <h3>King of Heaven</h3>
-                    <p>2005</p>
-                </a>
-            </article>
-
-            <article>
-                <a href="https://fr.wikipedia.org/wiki/Les_Associ%C3%A9s">
-                    <img src="public/img/Rectangle 269.webp" alt="Les Associés">
-                    <h3>Les Associés</h3>
-                    <p>2003</p>
-                </a>
-            </article>
-
-            <article>
-                <a href="https://fr.wikipedia.org/wiki/La_Chute_du_faucon_noir">
-                    <img src="public/img/la chute du faucon noir.webp" alt="La Chute du Faucon Noir">
-                    <h3>La Chute du Faucon Noir</h3>
-                    <p>2002</p>
-                </a>
-            </article>
-        
-            <article>
-                <a href="https://fr.wikipedia.org/wiki/Hannibal_(film,_2001)">
-                    <img src="public/img/hannibal.webp" alt="Hannibal">
-                    <h3>Hannibal</h3>
-                    <p>2001</p>
-                </a>
-            </article>
-
-            <article>
-                <a href="https://fr.wikipedia.org/wiki/Gladiator_(film,_2000)">
-                    <img src="public/img/gladiator (2).webp" alt="Gladiator">
-                    <h3>Gladiator</h3>
-                    <p>2000</p>
-                </a>
-            </article>
-
-            <article>
-                <a href="https://fr.wikipedia.org/wiki/%C3%80_armes_%C3%A9gales_(film,_1997)">
-                    <img src="public/img/GI jane.webp" alt="GI jane">
-                    <h3>À armes égales</h3>
-                    <p>1997</p>
-                </a>
-            </article>
-
-            <article>
-                <a href="https://fr.wikipedia.org/wiki/1492_:_Christophe_Colomb">
-                    <img src="public/img/1492.webp" alt="1492 : Cristophe Collomb">
-                    <h3>1492 : Cristophe Collomb</h3>
-                    <p>1992</p>
-                </a>
-            </article>
-
-            <article>
-                <a href="https://fr.wikipedia.org/wiki/Thelma_et_Louise">
-                    <img src="public/img/TandL.webp" alt="Thelma et Louise">
-                    <h3>Thelma et Louise</h3>
-                    <p>1991</p>
-                </a>
-            </article>
-
-            <article>
-                <a href="https://fr.wikipedia.org/wiki/Black_Rain_(film)">
-                    <img src="public/img/Black rain.webp" alt="Black Rain">
-                    <h3>Black Rain</h3>
-                    <p>1989</p>
-                </a>
-            </article>
-
-            <article>
-                <a href="https://fr.wikipedia.org/wiki/Legend_(film,_1985)">
-                    <img src="public/img/legend.webp" alt="Legend">
-                    <h3>Legend</h3>
-                    <p>1985</p>
-                </a>
-            </article>
-
-            <article>
-                <a href="https://fr.wikipedia.org/wiki/Blade_Runner_(film)">
-                    <img src="public/img/blade runner.webp" alt="Blade Runner">
-                    <h3>Blade Runner</h3>
-                    <p>1982</p>
-                </a>
-            </article>
-
-            <article>
-                <a href="https://fr.wikipedia.org/wiki/Alien_(film)">
-                    <img src="public/img/alien.webp" alt="Alien : Le 8e passager">
-                    <h3>Alien : Le 8e passager</h3>
-                    <p>1979</p>
-                </a>
-            </article>
-
-            <article>
-                <a href="https://fr.wikipedia.org/wiki/Les_Duellistes">
-                    <img src="public/img/duellistes.webp" alt="Les Duellistes">
-                    <h3>Les Duellistes</h3>
-                    <p>1977</p>
-                </a>
-            </article>
+            <div class="film__grid">
+                <article class="film__article">
+                    <a href="https://fr.wikipedia.org/wiki/American_Gangster" class="film__article--link">
+                        <img src="/public/img/american_gangster.webp" alt="american gangster" class="film__article--img">
+                        <h4 class="film__article--title">American Gangster</h4>
+                        <p class="film__article--date">2007</p>
+                    </a>
+                </article>
+                <article class="film__article">
+                    <a href="https://fr.wikipedia.org/wiki/Kingdom_of_Heaven" class="film__article--link">
+                        <img src="/public/img/KofH.webp" alt="King of Heaven" class="film__article--img">
+                        <h4 class="film__article--title">King of Heaven</h4>
+                        <p class="film__article--date">2005</p>
+                    </a>
+                </article>
+                <article class="film__article">
+                    <a href="https://fr.wikipedia.org/wiki/Les_Associ%C3%A9s" class="film__article--link">
+                        <img src="/public/img/Associes.webp" alt="Les Associés" class="film__article--img">
+                        <h4 class="film__article--title">Les Associés</h4>
+                        <p class="film__article--date">2003</p>
+                    </a>
+                </article>
+                <article class="film__article">
+                    <a href="https://fr.wikipedia.org/wiki/La_Chute_du_faucon_noir" class="film__article--link">
+                        <img src="/public/img/faucon_noir.webp" alt="La Chute du Faucon Noir" class="film__article--img">
+                        <h4 class="film__article--title">Black Hawk Down</h4>
+                        <p class="film__article--date">2002</p>
+                    </a>
+                </article>
+                <article class="film__article">
+                    <a href="https://fr.wikipedia.org/wiki/Hannibal_(film,_2001)" class="film__article--link">
+                        <img src="/public/img/hannibal.webp" alt="Hannibal" class="film__article--img">
+                        <h4 class="film__article--title">Hannibal</h4>
+                        <p class="film__article--date">2001</p>
+                    </a>
+                </article>
+                <article class="film__article">
+                    <a href="https://fr.wikipedia.org/wiki/Gladiator_(film,_2000)" class="film__article--link">
+                        <img src="/public/img/gladiator_film.webp" alt="Gladiator" class="film__article--img">
+                        <h4 class="film__article--title">Gladiator</h4>
+                        <p class="film__article--date">2000</p>
+                    </a>
+                </article>
+                <article class="film__article">
+                    <a href="https://fr.wikipedia.org/wiki/%C3%80_armes_%C3%A9gales_(film,_1997)" class="film__article--link">
+                        <img src="/public/img/GI_jane.webp" alt="GI jane" class="film__article--img">
+                        <h4 class="film__article--title"> G.I. Jane</h4>
+                        <p class="film__article--date">1997</p>
+                    </a>
+                </article>
+                <article class="film__article">
+                    <a href="https://fr.wikipedia.org/wiki/1492_:_Christophe_Colomb" class="film__article--link">
+                        <img src="/public/img/1492.webp" alt="1492 : Cristophe Collomb" class="film__article--img">
+                        <h4 class="film__article--title">1492 : Conquest of Paradise</h4>
+                        <p class="film__article--date">1992</p>
+                    </a>
+                </article>
+                <article class="film__article">
+                    <a href="https://fr.wikipedia.org/wiki/Thelma_et_Louise" class="film__article--link">
+                        <img src="/public/img/TandL.webp" alt="Thelma et Louise" class="film__article--img">
+                        <h4 class="film__article--title">Thelma and Louise</h4>
+                        <p class="film__article--date">1991</p>
+                    </a>
+                </article>
+                <article class="film__article">
+                    <a href="https://fr.wikipedia.org/wiki/Black_Rain_(film)" class="film__article--link">
+                        <img src="/public/img/Black_Rain.webp" alt="Black Rain" class="film__article--img">
+                        <h4 class="film__article--title">Black Rain</h4>
+                        <p class="film__article--date">1989</p>
+                    </a>
+                </article>
+                <article class="film__article">
+                    <a href="https://fr.wikipedia.org/wiki/Legend_(film,_1985)" class="film__article--link">
+                        <img src="/public/img/legend.webp" alt="Legend" class="film__article--img">
+                        <h4 class="film__article--title">Legend</h4>
+                        <p class="film__article--date">1985</p>
+                    </a>
+                </article>
+                <article class="film__article">
+                    <a href="https://fr.wikipedia.org/wiki/Blade_Runner_(film)" class="film__article--link">
+                        <img src="/public/img/blade_runner.webp" alt="Blade Runner" class="film__article--img">
+                        <h4 class="film__article--title">Blade Runner</h4>
+                        <p class="film__article--date">1982</p>
+                    </a>
+                </article>
+                <article class="film__article">
+                    <a href="https://fr.wikipedia.org/wiki/Alien_(film)" class="film__article--link">
+                        <img src="/public/img/alien.webp" alt="Alien : Le 8e passager" class="film__article--img">
+                        <h4 class="film__article--title">Alien : the 8th Passenger</h4>
+                        <p class="film__article--date">1979</p>
+                    </a>
+                </article>
+                <article class="film__article">
+                    <a href="https://fr.wikipedia.org/wiki/Les_Duellistes" class="film__article--link">
+                        <img src="/public/img/duellistes.webp" alt="Les Duellistes" class="film__article--img">
+                        <h4 class="film__article--title">The Duelists</h4>
+                        <p class="film__article--date">1977</p>
+                    </a>
+                </article>
+            </div>
         </section>
 
-        <section>
-            <h3>PLUS D'ARTICLES</h3>
-            <article>
+        <section class="more">
+            <h1 class="more__title">MORE ARTICLES</h1>
+            <article class="more__article1">
                 <a href="colisée.html">
-                    <img src="public/img/colisée.webp" alt="Le Colisée">
-                    <h2>Le Colisé, un lieu culte et son histoire.</h2>
-                    <p>Le Colisée est le plus grand amphithéâtre de l’Antiquité. Situé dans le centre de Rome, il était à l’origine de grandes activités ...          voir plus</p>
+                    <img src="/public/img/colisée.webp" alt="Le Colisée">
+                    <h2>The Colosseum, a cult site and its history</h2>
+                    <p>Located in the center of Rome, it was the site of major events in the ...<span class="article__span2">see more</span></p>
                 </a>
             </article>
-            <article>
-                
-                <a href="berserk.html">
-                    <img src="public/img/berserk.webp" alt="Berserk">
-                    <h2>Une épopée sanglante : Berserk.</h2>
-                    <p>Berserk est un manga seinen de dark fantasy du mangaka Kentaro Miura. Il est inspiré de la période du moyen-âge Européen ...        voir plus</p>
+            <article class="more__article2">
+                <a href="/en/gladiator.html">
+                    <img src="/public/img/berserk.webp" alt="Berserk" class="img__article">
+                    <h2>A bloody epic: Berserk</h2>
+                    <p class="article__p">Berserk is a dark fantasy seinen manga by mangaka Kentaro Miura. It is inspired by the period of the 
+                        European Middle Ages ...<span class="article__span2">see more</span>
+                    </p>
                 </a>
             </article>
         </section>
     </main>
-
-    <footer>
-        <p>POUPON Thomas - B2</p>
-        <q>Projet réalisé dans le cadre d'un exercice pédagogique au département <a href="http://mmimontbeliard.com/">MMI de Montbéliard</a></q>
-        <a href="mailto:thomaspoupon39270@gmail.com">Envoyer un mail</a>
-        <ul>
-            <li><a href="https://www.instagram.com/_thomas_ppn_/"><img src="public/icone/instagram.svg" alt="lien Instagram pour me suivre"></a></li>
-            <li><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/"><img src="public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre"></a></li>
+    
+    <footer class="footer">
+        <p class="footer__name">POUPON Thomas - B2</p>
+        <q class="footer__quote">Project realised in the framework of a pedagogical exercise in the department <a href="http://mmimontbeliard.com/" class="footer__link">MMI of Montbéliard</a></q>
+        <a href="mailto:thomaspoupon39270@gmail.com" class="footer__mailto"><p>Send a mail</p></a>
+        <ul class="footer__list">
+            <li class="footer__item"><a href="https://www.instagram.com/_thomas_ppn_/" class="footer__link"><img src="/public/icone/instagram.svg" alt="lien Instagram pour me suivre" class="footer__icn"></a></li>
+            <li class="footer__item"><a href="https://www.linkedin.com/in/thomas-poupon-78a795251/" class="footer__link"><img src="/public/icone/linkedin.svg" alt="lien LinkedIn pour me suivre" class="footer__icn"></a></li>
         </ul>
     </footer>
 </body>
