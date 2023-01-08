@@ -1,1 +1,34 @@
-/* mettre la class base */
+.base {
+    display: inline;
+    align-items: left;
+    gap: 20px;
+}
+
+.base__titre {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.base__temps {
+    display: flex;
+}
+
+.base__horloge {
+    display: inline;
+    align-items: left;
+    margin: 10px;
+    gap: 20px;
+}
+
+.base__minute {
+    padding-left: 10px;
+    border-left: 1px solid var(--noir);
+}
+
+.base__intro {
+    font-family: var(--linear);
+    font-style: medium;
+    font-weight: bold;
+    font-size: var(--s);
+    margin-bottom: 40px;
+}

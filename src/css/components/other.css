@@ -1,0 +1,85 @@
+
+.propos__p1 {
+    margin-bottom: 20px;
+    line-height: 145%;
+}
+
+.propos__p2 {
+    margin-bottom: 30px;
+    line-height: 145%;
+}
+
+.other {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5  px;
+}
+
+.other__link {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.quote {
+    margin-bottom: 30px;
+    font-family: var(--linear);
+    font-size: var(--s);
+    line-height: 145%;
+}
+
+.glossaire__item {
+    margin-bottom: 40px;
+}
+
+
+
+.frise__btn {
+    display: inline;
+    align-items: left;
+    margin-right: 40px;
+    padding: 3px 35px;
+    border: 1px solid var(--noir);
+    border-radius: 24px;
+    background-color: #D9D9D9;
+    font-family: var(--linear);
+    font-size: var(--s);
+    font-weight: bold;
+    color: var(--noir);
+    text-decoration: none;
+}
+
+
+.link__visit {
+    font-family: var(--linear);
+    font-size: var(--m);
+    margin: 30px;
+    text-decoration: underline 1px;
+}
+
+.link__livre {
+    font-family: var(--linear);
+    font-size: var(--s);
+    color: var(--blanc);
+    margin: 30px 20%;
+    padding: 15px 0;
+    border: var(--bleu-clair) 1px solid;
+    background-color: var(--bleu-clair);
+    border-radius: 50px;
+}
+
+
+.btn__RidleyScott {
+    display: flex;
+    place-content: center;
+    margin: 60px 0 0 0;
+    width: 100%;
+    height: 70px;
+    padding: 15px 20px 20px 125px;
+    border: none;
+    border-radius: 5px;
+    font-size: var(--l);
+    color: var(--blanc);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
