@@ -26,6 +26,7 @@
         
 
         <nav id="mainNav" x-show="menuIsOpen" class="header__menu">
+            <button class="menu__close" @click="menuIsOpen= ! menuIsOpen"><img class="menu__close--img" src="/public/icone/cross_menu.svg" alt="dermer le menu"></button>
             <ul class="menu__list--top">
                 <li class="menu__list list__article"><a href="en/index.html" class="menu__link"><img src="/public/icone/articles.svg" alt="articles" class="menu__article--icn">Articles</a></li>
                 <ul class="menu__list--article">
